@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Venta de bebidas! Mira todas nuestras ofertas semanales y nuevos productos aquí">
+    <meta name="keywords" content="distribuidora, Tittarelli, bebidas, comprar, ofertas, nuevo">
+    <title>Inicio | Distribuidora Tittarelli</title>
+    <link rel="shortcut icon" href="./assets/img/iconos/DLogo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="//code.tidio.co/2hfqakvhpoye9tednqlyzdlhmegj6rgk.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="tituLogo">
+            <a href="#"><img class="logo" src="./assets/img/iconos/DLogo1.png" alt="Logo Distribuidora Tittarelli"></a>
+            <h1>Distribuidora Tittarelli</h1>
+            <h2>-Directo a tu Hogar-</h2>
+        </div>
+        <!-- propiedad del menu hamburguesa -->
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">x</span>
+        </label>
+        <nav>
+            <ul>
+                <li><a class="activo shadow-link" href="#">Inicio</a></li>
+                <li><a class="shadow-link" href="./pages/acercaDeNosotros.html">Acerca de nosotros</a></li>
+                <li><a class="shadow-link" href="./pages/nuestrosProductos.html">Nuestros productos</a></li>
+                <li><a class="shadow-link" href="./pages/ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainIdex">
+        <div class="videoContainer">
+            <div class="contactInfo">
+                <p>Ahora puedes contactarte con nosotros vía:</p>
+                <a href="https://web.whatsapp.com/">
+                    <img src="./assets/img/iconos/botonWhatsapp.png" alt="Boton de Whatsapp">
+                </a>
+                
+                <button id="abrirChat">Chat en línea</button>
+                
+                <div class="tooltip">
+                    <button class="llamada" onclick="mostrarTooltip()">Llamar ahora</button>
+                    <div id="tooltipText" class="tooltip-text">Teléfono: 1234567890</div>
+                </div>
+        
+
+            </div>
+            <video autoplay loop muted class="productsVideo">
+                <source class="videoLoop" src="./assets/video/productsVideoO.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="conteiner_card wow fadeInUp" data-wow-duration="0.4s">
+            <h2>Ofertas Semanales 🔥</h2>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#conAlcohol"><img src="./assets/img/ofertas/heinekenLata.jpg"
+                        alt="imagen heineken en lata"></a>
+                <p>¡10% OFF! Comprando mas de 6 unidades</p>
+            </section>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#conAlcohol"><img
+                        src="./assets/img/ofertas/jackDanielsBottle.png" alt="imagen jack daniels botella"></a>
+                <p>¡20% OFF! Hasta agotar stock</p>
+            </section>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#sinAlcohol"><img src="./assets/img/ofertas/poweradeBlue.jpg"
+                        alt="imagen powerade azul"></a>
+                <p>¡20% OFF! Hasta agotar stock</p>
+            </section>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#sinAlcohol"><img src="./assets/img/ofertas/baggio.png"
+                        alt="imagen jugos baggio distintos sabores"></a>
+                <p>¡30% OFF! Pagando de contado</p>
+            </section>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#conAlcohol"><img src="./assets/img/ofertas/fernet.jfif"
+                        alt="imagen fernet branca botella"></a>
+                <p>¡15% OFF! Comprando mas de 10 unidades</p>
+            </section>
+            <section class="card">
+                <a href="./pages/nuestrosProductos.html#sinAlcohol"><img src="./assets/img/ofertas/sprite.png"
+                        alt="imagen cocacola sin azucar botella"></a>
+                <p>¡15% OFF! Comprando mas de 10 unidades</p>
+            </section>
+        </div>
+        <div class="nuevos_productos wow fadeInUp" data-wow-duration="0.5s">
+            <h2>Nuevos productos 🚀</h2>
+            <section class="nuevo_card">
+                <a href="./pages/nuestrosProductos.html#loNuevo"><img src="./assets/img/nuevos_productos/absolutsLimitado.png"
+                        alt="imagen absoluts edicion limitada"></a>
+                <p>Absolut ¡Botellas de edicion limitada!</p>
+            </section>
+            <section class="nuevo_card">
+                <a href="./pages/nuestrosProductos.html#loNuevo"><img src="./assets/img/nuevos_productos/cocalife.jpg"
+                        alt="imagen cocacola life lata"></a>
+                <p>Nueva Coca-Cola Life en lata</p>
+            </section>
+            <section class="nuevo_card">
+                <a href="./pages/nuestrosProductos.html#loNuevo"><img src="./assets/img/nuevos_productos/newPepsiSmoresCollection.jpg"
+                        alt="imagen pepsi mores lata"></a>
+                <p>Pepsi S'mores en lata</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="redes">
+            <a href="https://www.facebook.com/"><img src="./assets//img/iconos/facebookIcon.png"
+                    alt="facebook logo"></a>
+            <a href="https://www.instagram.com/"><img src="./assets/img/iconos/instagramIcon.png"
+                    alt="Instagram logo"></a>
+        </div>
+        <div class="parrafoFooter">
+            <p>Distribuidora Tittarelli - Todos los derechos reservados ©</p>
+        </div>
+    </footer>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();;
+    </script>
+
+<script>
+    document.getElementById("abrirChat").addEventListener("click", function() {
+        // Abre el chat de Tidio
+        if (typeof tidioChatApi !== 'undefined') {
+            tidioChatApi.open();
+        } else {
+            console.error('No se pudo encontrar la API de Tidio.');
+        }
+    });
+</script>
+
+<!-- <script>
+    function mostrarTooltip() {
+    const tooltip = document.getElementById("tooltipText");
+    tooltip.style.display = "block";
+
+    // Ocultar el tooltip despues de x
+    setTimeout(function() {
+        tooltip.style.display = "none";
+    }, 100000); 
+}
+</script> -->
+
+<script>
+    // Obtener el elemento del tooltip y el botón
+const tooltip = document.getElementById("tooltipText");
+const boton = document.querySelector(".llamada");
+
+// Función para mostrar u ocultar el tooltip
+function toggleTooltip() {
+    if (tooltip.style.display === "block") {
+        tooltip.style.display = "none";
+    } else {
+        tooltip.style.display = "block";
+    }
+}
+
+// Función para ocultar el tooltip si se hace clic fuera del botón
+function ocultarTooltip(event) {
+    if (event.target !== boton && event.target !== tooltip) {
+        tooltip.style.display = "none";
+    }
+}
+
+// Agregar un controlador de eventos de clic al botón
+boton.addEventListener("click", toggleTooltip);
+
+// Agregar un controlador de eventos de clic al documento para ocultar el tooltip si se hace clic fuera del botón
+document.addEventListener("click", ocultarTooltip);
+</script>
+
+</body>
+
+</html>
