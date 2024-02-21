@@ -85,6 +85,7 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
                 position: relative;
                 transition: box-shadow 0.3s ease;
                 line-height: normal;
@@ -109,6 +110,7 @@ header {
 
                 .shadow-link {
                     height: 3vh;
+                    width: 100%;
                     text-decoration: none;
                     font-family: monospace;
                     color: rgb(255, 255, 255);

@@ -1,10 +1,45 @@
 .historiaImg {
     width: 29vw;
+    position: relative;
+    display: inline-block;
 
     img {
-        width: 28vw;
-        height: 45vh;
+        max-width: 100%;
+        height: auto;
         clip-path: ellipse(47% 42% at center);
+        display: block;
+        transition: filter 0.5s ease;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        color: white;
+        text-align: center;
+         /* Evita que el overlay interfiera con el hover */
+
+        a{
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: rgb(176, 107, 255);
+            }
+        }
+    }
+
+    &:hover .imagen {
+        filter: brightness(70%);
+    }
+    &:hover .overlay {
+        opacity: 1;
     }
 }
 

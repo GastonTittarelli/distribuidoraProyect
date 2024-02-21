@@ -89,6 +89,7 @@ header nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   position: relative;
   transition: box-shadow 0.3s ease;
   line-height: normal;
@@ -109,6 +110,7 @@ header nav ul li:hover:before {
 }
 header nav ul li .shadow-link {
   height: 3vh;
+  width: 100%;
   text-decoration: none;
   font-family: monospace;
   color: rgb(255, 255, 255);
@@ -141,7 +143,7 @@ main {
 
 .mainAcercaDe {
   width: 100%;
-  height: 195vh;
+  height: 135vh;
 }
 
 .mainProductos {
@@ -503,12 +505,43 @@ footer .parrafoFooter p {
 
 .historiaImg {
   width: 29vw;
+  position: relative;
+  display: inline-block;
 }
 .historiaImg img {
-  width: 28vw;
-  height: 45vh;
+  max-width: 100%;
+  height: auto;
   -webkit-clip-path: ellipse(47% 42% at center);
           clip-path: ellipse(47% 42% at center);
+  display: block;
+  transition: filter 0.5s ease;
+}
+.historiaImg .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: white;
+  text-align: center;
+  /* Evita que el overlay interfiera con el hover */
+}
+.historiaImg .overlay a {
+  color: white;
+  text-decoration: none;
+}
+.historiaImg .overlay a:hover {
+  color: rgb(176, 107, 255);
+}
+.historiaImg:hover .imagen {
+  filter: brightness(70%);
+}
+.historiaImg:hover .overlay {
+  opacity: 1;
 }
 
 .nuestroContacto {
@@ -577,7 +610,7 @@ footer .parrafoFooter p {
 }
 .videoContainer .contactInfo button {
   width: 13vw;
-  height: 3rem;
+  height: 7vh;
   border: solid 0px;
   border-radius: 25px 25px 25px 25px;
   background-color: rgb(72, 163, 224);
@@ -601,7 +634,7 @@ footer .parrafoFooter p {
   position: absolute;
   height: 2.5rem;
   font-family: Maven Pro;
-  width: 14vw;
+  width: 13vw;
   text-align: center;
   top: calc(100% + 20px);
   left: 20%;
@@ -621,18 +654,21 @@ footer .parrafoFooter p {
 
 .contenedorInfoHistoria {
   width: 100%;
-  height: 110vh;
+  height: 130vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .contenedorInfoHistoria .historia {
-  width: 100%;
+  width: 95%;
   height: 52vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  background-color: rgb(32, 36, 34);
+  border-radius: 5px;
 }
 .contenedorInfoHistoria .historia .historiaText {
   height: 39vh;
@@ -647,6 +683,7 @@ footer .parrafoFooter p {
   margin-left: 2rem;
   font-weight: bold;
   font-family: "Maven Pro", sans-serif;
+  color: white;
 }
 .contenedorInfoHistoria .historia .historiaText p {
   width: 94%;
@@ -656,27 +693,36 @@ footer .parrafoFooter p {
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
   font-style: oblique;
+  color: white;
 }
 
 .infoDistribucion {
   height: 52vh;
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  background-color: rgb(32, 36, 34);
+  border-radius: 5px;
 }
 .infoDistribucion .infoText {
-  width: 70vw;
-  height: 50vh;
+  width: 50%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+.infoDistribucion .infoText div {
+  height: 50%;
 }
 .infoDistribucion .infoText div h2 {
   width: 100%;
   font-family: "Maven Pro", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
+  color: white;
 }
 .infoDistribucion .infoText div p {
   font-size: 1.3rem;
@@ -684,7 +730,8 @@ footer .parrafoFooter p {
   line-height: 2;
   font-family: "Times New Roman", Times, serif;
   text-align: justify;
-  margin-left: 2rem;
+  margin-left: 0.7rem;
+  color: rgb(255, 255, 255);
 }
 
 .mapa {
@@ -694,38 +741,62 @@ footer .parrafoFooter p {
   justify-content: space-evenly;
   align-items: center;
 }
-.mapa h3 {
+.mapa #map-content {
+  height: 63vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.mapa #map-content h3 {
   font-size: 1.5rem;
   font-family: "Maven Pro", sans-serif;
+  padding-top: 0.9rem;
 }
-.mapa iframe {
+.mapa #map-content iframe {
   width: 35vw;
   height: 45vh;
+  padding-top: 0.9rem;
 }
-.mapa .direction {
+.mapa #map-content .direction {
   text-decoration: none;
-  color: rgb(53, 40, 174);
+  padding-top: 0.9rem;
   font-size: 1.2rem;
-  width: 360px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-.mapa .direction:hover {
+.mapa #map-content .direction p {
+  text-align: center;
+  color: rgb(53, 40, 174);
+  width: 80%;
+}
+.mapa #map-content .direction p:hover {
   background-color: rgb(144, 141, 141);
   border-radius: 10px 10px 10px 10px;
   color: white;
 }
-.mapa .direction:active {
+.mapa #map-content .direction p:active {
   background-color: rgb(70, 69, 69);
 }
 
 .slide {
-  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 48%;
 }
 
 .carousel-inner {
-  width: 70vw;
+  width: 100%;
+}
+
+.cImg {
+  border-radius: 10px 10px 10px 10px;
 }
 
 @media screen and (max-width: 1662px) {
@@ -1334,4 +1405,113 @@ footer .parrafoFooter p {
   .whatsapp {
     justify-content: flex-start;
   }
+}
+#spinner-container {
+  margin-top: 4rem;
+}
+
+@keyframes ldio-e5o5gpsl1xv {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ldio-e5o5gpsl1xv div {
+  left: 90px;
+  top: 17px;
+  position: absolute;
+  animation: ldio-e5o5gpsl1xv linear 1s infinite;
+  background: #1d0e0b;
+  width: 20px;
+  height: 38px;
+  border-radius: 10px/10.64px;
+  transform-origin: 10px 83px;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -0.9090909091s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(2) {
+  transform: rotate(32.7272727273deg);
+  animation-delay: -0.8181818182s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(3) {
+  transform: rotate(65.4545454545deg);
+  animation-delay: -0.7272727273s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(4) {
+  transform: rotate(98.1818181818deg);
+  animation-delay: -0.6363636364s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(5) {
+  transform: rotate(130.9090909091deg);
+  animation-delay: -0.5454545455s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(6) {
+  transform: rotate(163.6363636364deg);
+  animation-delay: -0.4545454545s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(7) {
+  transform: rotate(196.3636363636deg);
+  animation-delay: -0.3636363636s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(8) {
+  transform: rotate(229.0909090909deg);
+  animation-delay: -0.2727272727s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(9) {
+  transform: rotate(261.8181818182deg);
+  animation-delay: -0.1818181818s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(10) {
+  transform: rotate(294.5454545455deg);
+  animation-delay: -0.0909090909s;
+  background: #1d0e0b;
+}
+
+.ldio-e5o5gpsl1xv div:nth-child(11) {
+  transform: rotate(327.2727272727deg);
+  animation-delay: 0s;
+  background: #1d0e0b;
+}
+
+.loadingio-spinner-spinner-1y57uo9vmii {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ldio-e5o5gpsl1xv {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+
+.ldio-e5o5gpsl1xv div {
+  box-sizing: content-box;
 }/*# sourceMappingURL=style.css.map */
