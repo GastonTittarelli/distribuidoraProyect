@@ -90,24 +90,27 @@ header {
                 transition: box-shadow 0.3s ease;
                 line-height: normal;
                 
-                &:before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 0;
-                        height: 100%;
-                        background-color: rgb(134, 130, 243, 0.3); ; 
+                // &:before {
+                //         content: '';
+                //         position: absolute;
+                //         left: 0;
+                //         top: 0;
+                //         width: 0;
+                //         height: 100%;
+                //         background-color: rgb(134, 130, 243, 0.3); ; 
                         
-                        border-radius: 8px 9px 9px 8px;
-                        transition: width 0.5s ease; 
+                //         border-radius: 8px 9px 9px 8px;
+                //         transition: width 0.5s ease; 
                         
-                    }
-                    &:hover:before {
-                        width: 100%; 
+                //     }
+                //     &:hover:before {
+                //         width: 100%; 
                         
-                    }
-
+                //     }
+                &:focus {
+                    color: rgb(134, 130, 243);
+                    
+                }
                 .shadow-link {
                     height: 3vh;
                     width: 100%;
@@ -116,9 +119,7 @@ header {
                     color: rgb(255, 255, 255);
                     position: relative;
                     transition: box-shadow 0.3s ease; 
-                    
-
-                    
+                    transition: color 0.3s;
 
                     &:hover {
                         color: rgb(134, 130, 243); 
@@ -130,6 +131,52 @@ header {
                         color: rgb(134, 130, 243);
                     }
                 }
+                .on{
+                    color: rgb(134, 130, 243);
+                }
+            }
+            .productos-dropdown{
+                z-index: 2;
+                
+                .submenu {
+                    display: none;
+                    height: 80px;
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.1);  
+                    padding: 10px;
+                    border-radius: 0 0 5px 5px; 
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+                    top: 20px;
+                    z-index: 1;
+
+                    li {
+                        margin-bottom: 1px; 
+
+                        a {
+                            color: #333; 
+                            text-decoration: none; 
+                            transition: color 0.3s;
+
+                            
+                            &:hover{
+                                color: rgb(134, 130, 243);;
+                            }
+
+                            &:nth-child(1).activ{
+                                
+                                color: rgb(134, 130, 243);
+                            }
+                        }
+                    }
+                }
+                
+                &:hover .submenu {
+                    display: block; 
+                }
+            }
+
+            .productos-dropdown .shadow-link:focus {
+                color: rgb(134, 130, 243);
             }
         }
     }

@@ -94,19 +94,8 @@ header nav ul li {
   transition: box-shadow 0.3s ease;
   line-height: normal;
 }
-header nav ul li:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: rgba(134, 130, 243, 0.3);
-  border-radius: 8px 9px 9px 8px;
-  transition: width 0.5s ease;
-}
-header nav ul li:hover:before {
-  width: 100%;
+header nav ul li:focus {
+  color: rgb(134, 130, 243);
 }
 header nav ul li .shadow-link {
   height: 3vh;
@@ -116,6 +105,7 @@ header nav ul li .shadow-link {
   color: rgb(255, 255, 255);
   position: relative;
   transition: box-shadow 0.3s ease;
+  transition: color 0.3s;
 }
 header nav ul li .shadow-link:hover {
   color: rgb(134, 130, 243);
@@ -123,6 +113,43 @@ header nav ul li .shadow-link:hover {
 header nav ul li .shadow-link:nth-child(1).activo {
   transform: scale(1.1, 1.2);
   font-weight: bold;
+  color: rgb(134, 130, 243);
+}
+header nav ul li .on {
+  color: rgb(134, 130, 243);
+}
+header nav ul .productos-dropdown {
+  z-index: 2;
+}
+header nav ul .productos-dropdown .submenu {
+  display: none;
+  height: 80px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  top: 20px;
+  z-index: 1;
+}
+header nav ul .productos-dropdown .submenu li {
+  margin-bottom: 1px;
+}
+header nav ul .productos-dropdown .submenu li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+header nav ul .productos-dropdown .submenu li a:hover {
+  color: rgb(134, 130, 243);
+}
+header nav ul .productos-dropdown .submenu li a:nth-child(1).activ {
+  color: rgb(134, 130, 243);
+}
+header nav ul .productos-dropdown:hover .submenu {
+  display: block;
+}
+header nav ul .productos-dropdown .shadow-link:focus {
   color: rgb(134, 130, 243);
 }
 
@@ -216,8 +243,8 @@ main {
   font-family: "Maven Pro", sans-serif;
 }
 .conteiner_card .card {
-  width: 23vw;
-  height: 31.5vh;
+  width: 350px;
+  height: 250px;
   background-color: rgb(146, 92, 92);
   border-radius: 16px 16px 16px 16px;
   box-shadow: 7px 7px 7px 0px rgb(27, 27, 27);
@@ -229,13 +256,16 @@ main {
 }
 .conteiner_card .card a img {
   width: 100%;
-  height: 27vh;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px 12px 0px 0px;
 }
 .conteiner_card .card p {
   height: 3.5vh;
   font-size: 1.2rem;
   font-weight: bolder;
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -287,7 +317,7 @@ main {
 
 .productos {
   width: 100%;
-  height: 60vh;
+  height: 20vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -363,14 +393,14 @@ main {
   align-items: center;
 }
 
-.conAlcohol, .otrosProductos, .sinAlcohol {
+.nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol {
   width: 100%;
-  height: 80vh;
+  height: 270vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.conAlcohol h2, .otrosProductos h2, .sinAlcohol h2 {
+.nuestrosProductos h2, .conAlcohol h2, .otrosProductos h2, .sinAlcohol h2 {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -378,7 +408,7 @@ main {
   align-items: flex-end;
   font-family: "Maven Pro", sans-serif;
 }
-.conAlcohol article, .otrosProductos article, .sinAlcohol article {
+.nuestrosProductos article, .conAlcohol article, .otrosProductos article, .sinAlcohol article {
   width: 18%;
   height: 30vh;
   background-color: rgb(146, 92, 92);
@@ -389,21 +419,21 @@ main {
   flex-direction: column;
   text-align: center;
 }
-.conAlcohol article:hover, .otrosProductos article:hover, .sinAlcohol article:hover {
+.nuestrosProductos article:hover, .conAlcohol article:hover, .otrosProductos article:hover, .sinAlcohol article:hover {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
   transform: translateY(-4%);
 }
-.conAlcohol article a img, .otrosProductos article a img, .sinAlcohol article a img {
+.nuestrosProductos article a img, .conAlcohol article a img, .otrosProductos article a img, .sinAlcohol article a img {
   width: 100%;
   height: 23vh;
   border-radius: 12px 12px 0px 0px;
 }
-.conAlcohol article .product img, .otrosProductos article .product img, .sinAlcohol article .product img {
+.nuestrosProductos article .product img, .conAlcohol article .product img, .otrosProductos article .product img, .sinAlcohol article .product img {
   width: 100%;
   height: 23vh;
   border-radius: 12px 12px 0px 0px;
 }
-.conAlcohol article p, .otrosProductos article p, .sinAlcohol article p {
+.nuestrosProductos article p, .conAlcohol article p, .otrosProductos article p, .sinAlcohol article p {
   width: 100%;
   height: 6vh;
   padding-left: 10px;
@@ -413,6 +443,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.conAlcohol, .otrosProductos, .sinAlcohol {
+  height: 120vh;
 }
 
 .loNuevo {
@@ -800,9 +834,6 @@ footer .parrafoFooter p {
 }
 
 @media screen and (max-width: 1662px) {
-  .conteiner_card .card {
-    width: 26vw;
-  }
   .conteiner_card .card p {
     font-size: 1rem;
   }
@@ -1406,6 +1437,11 @@ footer .parrafoFooter p {
     justify-content: flex-start;
   }
 }
+#inputBusqueda {
+  width: 500px;
+  height: 25px;
+}
+
 #spinner-container {
   margin-top: 4rem;
 }

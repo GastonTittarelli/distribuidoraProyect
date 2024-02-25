@@ -28,17 +28,28 @@
             <h1>Distribuidora Tittarelli</h1>
             <h2>-Directo a tu Hogar-</h2>
         </div>
+
         <input type="checkbox" id="menu-check">
         <label id="menu" for="menu-check">
             <span id="menu-abrir">&#9776;</span>
             <span id="menu-cerrar">x</span>
         </label>
+
         <nav>
             <ul>
                 <li><a class="shadow-link" href="../index.html">Inicio</a></li>
-                <li><a class="shadow-link" href="../pages/acercaDeNosotros.html">Acerca de nosotros</a></li>
-                <li><a class="activo shadow-link" href="#">Nuestros productos</a></li>
-                <li><a class="shadow-link" href="../pages/ubicacion.html">Ubicación</a></li>
+                <li><a class="shadow-link" href="./acercaDeNosotros.html">Acerca de nosotros</a></li>
+
+                <li class="productos-dropdown">
+                    <a class="activo shadow-link" href="#">Nuestros productos</a>
+                    <ul class="submenu">
+                        <li><a href="./conAlcohol.html">Con alcohol</a></li>
+                        <li><a href="./sinAlcohol.html">Sin alcohol</a></li>
+                        <li><a href="./otrosProductos.html">Otros productos</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="shadow-link" href="./ubicacion.html">Ubicación</a></li>
             </ul>
         </nav>
     </header>
@@ -47,31 +58,12 @@
             <div class="titleContainer">
                 <h2>Nuestra Selección de Productos</h2>
             </div>
-            <section>
-                <a href="#conAlcohol"><img src="../assets/img/bebidasConAlcohol.jpg"
-                        alt="imagen de bebidas con alcohol"></a>
-                <a href="#conAlcohol">
-                    <h3>Bebidas con alcohol</h3>
-                </a>
-            </section>
-            <section>
-                <a href="#sinAlcohol"><img src="../assets/img/bebidasSinAlcohol.jpg"
-                        alt="imagen de bebidas sin alcohol"></a>
-                <a href="#sinAlcohol">
-                    <h3>Bebidas sin alcohol</h3>
-                </a>
-            </section>
-            <section>
-                <a href="#otrosProductos"><img src="../assets/img/otrosProductos2.png"
-                        alt="imagen de otros productos baggio"></a>
-                <a href="#otrosProductos">
-                    <h3>Otros productos</h3>
-                </a>
-            </section>
         </div>
 
-        <section class="conAlcohol wow fadeIn" id="conAlcohol">
-            <h2>Bebidas con alcohol</h2>
+        <input type="text" id="inputBusqueda" placeholder="Buscar productos">
+
+        <section class="nuestrosProductos wow fadeIn" id="nuestrosProductos">
+            
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/beefeater.jpg"
                         alt="imagen de beefeater botella"></div>
@@ -122,10 +114,8 @@
                         alt="imagen de smirnoff botella"></div>
                 <p>Vodka - Smirnoff 700ml</p>
             </article>
-        </section>
+        
 
-        <section class="sinAlcohol wow fadeIn" id="sinAlcohol">
-            <h2>Bebidas sin alcohol</h2>
             <article>
                 <div class="product"><img src="../assets/img/sin_alcohol/aquarius.jpg"
                         alt="imagen de aquarius botella"></div>
@@ -175,10 +165,8 @@
                         alt="imagen de agua villavicencio botella"></div>
                 <p>Agua - Villavicencio 500ml</p>
             </article>
-        </section>
+        
 
-        <section class="otrosProductos wow fadeIn" id="otrosProductos">
-            <h2>Otros Productos</h2>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/aceiteDeOliva.jpg"
                         alt="imagen de aceite de oliva botella vidrio"></div>
@@ -222,7 +210,7 @@
         </section>
 
 
-        <section class="loNuevo wow fadeIn" id="loNuevo">
+        <!-- <section class="loNuevo wow fadeIn" id="loNuevo">
             <h2>Lo nuevo 🔥</h2>
             <article>
                 <div class="product"><img src="../assets//img/nuevos_productos/absolutsLimitado.png"
@@ -239,7 +227,7 @@
                         alt="imagen de Pepsi coleccion mores"></div>
                 <p>Pepsi Mores - 200ml</p>
             </article>
-        </section>
+        </section> -->
 
     </main>
     <footer>
