@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Venta de bebidas! Mira todas nuestras ofertas semanales y nuevos productos aquí">
     <meta name="keywords" content="distribuidora, Tittarelli, bebidas, comprar, ofertas, nuevo">
-    <title>Inicio | Distribuidora Tittarelli</title>
+    <title>Otros Productos | Distribuidora Tittarelli</title>
     <link rel="shortcut icon" href="../assets/img/iconos/DLogo.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,49 +52,69 @@
             </ul>
         </nav>
     </header>
-    <main class="">
+    <main class="oProductos">
         
-        <section class="otrosProductos wow fadeIn" id="otrosProductos">
+        <div class="containerBtn">
+            <div class="middle">
+            <a href="./nuestrosProductos.html">
+                    <button class="btn">Ir a todos los productos</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="titleContainer">
             <h2>Otros Productos</h2>
+            <input type="text" id="inputBusqueda" placeholder="Buscar productos">
+        </div>
+
+        <section class="otrosProductos wow fadeIn" id="otrosProductos">
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/aceiteDeOliva.jpg"
                         alt="imagen de aceite de oliva botella vidrio"></div>
-                <p>Aceite de Oliva - Baggio 750ml</p>
+                <p>Aceite de Oliva Baggio - Botella 750ml</p>
+                <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/arvejas.jpg"
                         alt="imagen de arvejas lata"></div>
-                <p>Arvejas - Baggio 350g</p>
+                <p>Arvejas Baggio - Lata 350g</p>
+                <h4>Venta individual o en pack de 12 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/chocolatada.png"
                         alt="imagen de chocolatada caja"></div>
-                <p>Leche Chocolatada - Baggio 200ml</p>
+                <p>Leche Chocolatada Baggio - Caja 200ml</p>
+                <h4>Venta de 9 unidades o en pack de 18 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/dulceDeLeche.png"
                         alt="imagen de dulce de leche"></div>
-                <p>Dulce de Leche - Baggio 400g</p>
+                <p>Dulce de Leche Baggio - 400g</p>
+                <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/lecheDescremada.png"
                         alt="imagen de leche descremada caja"></div>
-                <p>Leche Descremada - Baggio 1l</p>
+                <p>Leche Descremada Baggio - Caja 1l</p>
+                <h4>Venta en caja de 8 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/lecheEntera.png"
                         alt="imagen de leche entera caja"></div>
-                <p>Leche Entera - Baggio 1l</p>
+                <p>Leche Entera Baggio Caja 1l</p>
+                <h4>Venta en caja de 8 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/mermelada.jpg"
                         alt="imagen de mermelada frasco"></div>
-                <p>Mermelada - Baggio 454g</p>
+                <p>Mermelada Baggio - Frasco 454g</p>
+                <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/pureDeTomate.png"
                         alt="imagen de pure de tomate caja"></div>
-                <p>Pure de Tomate - Baggio 200g</p>
+                <p>Pure de Tomate Baggio - Caja 200g</p>
+                <h4>Venta individual o en caja de 18 unidades</h4>
             </article>
         </section>
         
@@ -111,12 +131,33 @@
         </div>
     </footer>
 
-    <script src="./js/wow.min.js"></script>
+    <script src="../js/wow.min.js"></script>
     <script>
         new WOW().init();;
     </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+const inputBusqueda = document.getElementById('inputBusqueda');
+const productos = document.querySelectorAll('.otrosProductos article');
 
+inputBusqueda.addEventListener('input', function() {
+    const textoBusqueda = inputBusqueda.value.toLowerCase().trim();
+    const palabrasBusqueda = textoBusqueda.split(' ').filter(palabra => palabra.length > 0);
+
+    productos.forEach(function(producto) {
+        const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
+        const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
+
+        if (todasPalabrasEnNombre) {
+            producto.style.display = 'block';
+        } else {
+            producto.style.display = 'none';
+        }
+    });
+});
+});
+</script>
 
 
 </body>

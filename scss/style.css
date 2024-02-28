@@ -83,8 +83,8 @@ header nav ul {
   margin: 0;
 }
 header nav ul li {
-  font-size: 1rem;
-  width: 15vw;
+  font-size: 1.1rem;
+  width: 20vw;
   height: 3.5vh;
   display: flex;
   align-items: center;
@@ -99,7 +99,8 @@ header nav ul li:focus {
 }
 header nav ul li .shadow-link {
   height: 3vh;
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none;
   font-family: monospace;
   color: rgb(255, 255, 255);
@@ -111,7 +112,7 @@ header nav ul li .shadow-link:hover {
   color: rgb(134, 130, 243);
 }
 header nav ul li .shadow-link:nth-child(1).activo {
-  transform: scale(1.1, 1.2);
+  transform: scale(1.05, 1.1);
   font-weight: bold;
   color: rgb(134, 130, 243);
 }
@@ -123,22 +124,41 @@ header nav ul .productos-dropdown {
 }
 header nav ul .productos-dropdown .submenu {
   display: none;
-  height: 80px;
+  height: 0;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 0 0 5px 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 10px;
+  border-radius: 0 0 8px 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  top: 20px;
+  top: 22px;
   z-index: 1;
+  overflow: hidden;
+  animation-name: despliegue;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes despliegue {
+  from {
+    height: 0;
+  }
+  to {
+    height: 120px;
+  }
 }
 header nav ul .productos-dropdown .submenu li {
-  margin-bottom: 1px;
+  margin-bottom: 15px;
+  height: 1.5rem;
+  line-height: 1.5rem;
 }
 header nav ul .productos-dropdown .submenu li a {
-  color: #333;
+  color: white;
+  font-family: monospace;
   text-decoration: none;
   transition: color 0.3s;
+  height: 100%;
+  width: auto;
+  font-size: 1rem;
 }
 header nav ul .productos-dropdown .submenu li a:hover {
   color: rgb(134, 130, 243);
@@ -148,9 +168,7 @@ header nav ul .productos-dropdown .submenu li a:nth-child(1).activ {
 }
 header nav ul .productos-dropdown:hover .submenu {
   display: block;
-}
-header nav ul .productos-dropdown .shadow-link:focus {
-  color: rgb(134, 130, 243);
+  height: auto;
 }
 
 main {
@@ -173,9 +191,12 @@ main {
   height: 135vh;
 }
 
-.mainProductos {
+.mainProductos, .cAlcohol, .sAlcohol, .oProductos {
   width: 100%;
-  height: 390vh;
+  max-height: 670vh;
+  min-height: auto;
+  display: flex;
+  gap: 4rem;
 }
 
 .mainUbicacion {
@@ -315,32 +336,78 @@ main {
   align-items: center;
 }
 
-.productos {
-  width: 100%;
-  height: 20vh;
+.containerBtn {
+  width: 95%;
+  margin-top: 1rem;
   display: flex;
-  justify-content: space-evenly;
+}
+.containerBtn .middle {
+  transform: translate(-1%, -1%);
+  text-align: center;
+}
+.containerBtn .middle a .btn {
+  background-color: transparent;
+  border: 2px solid gray;
+  font-family: "Marven Pro", sans-serif;
+  color: rgb(59, 59, 59);
+  font-weight: bold;
+  padding: 12px 20px;
+  min-width: 200px;
+  font-size: 1rem;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+  transition: color 0.5s linear;
+  position: relative;
+}
+.containerBtn .middle a .btn:hover {
+  color: #fff;
+}
+.containerBtn .middle a .btn:hover::before {
+  width: 100%;
+}
+.containerBtn .middle a .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: gray;
+  border-radius: 0px 19px 19px 0px;
+  z-index: -1;
+  transition: width 0.7s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.5, 0.4, 0.7);
+}
+
+.titleNuestros {
+  margin-top: 2rem;
+}
+
+.titleContainer {
+  width: 95%;
+  height: 30vh;
+  border: solid 1px black;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 1rem;
+  gap: 2rem;
+  background-color: rgb(146, 92, 92);
 }
-.productos .titleContainer {
-  width: 100%;
-  height: 10vh;
+.titleContainer h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-}
-.productos .titleContainer h2 {
-  width: 80%;
-  height: 7vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   text-align: center;
   font-size: 1.8rem;
   font-family: "Maven Pro", sans-serif;
-  animation-name: pulse; /* Nombre de la animación */
+  animation-name: pulse;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
@@ -355,7 +422,20 @@ main {
     transform: scale(1); /* Volver al tamaño original del elemento */
   }
 }
-.productos section {
+.titleContainer #inputBusqueda {
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 18px;
+  width: 500px;
+  height: 38px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.titleContainer #inputBusqueda:focus {
+  border-color: rgb(134, 130, 243);
+}
+.titleContainer section {
   width: 25vw;
   height: 34vh;
   background-color: rgb(146, 92, 92);
@@ -367,11 +447,11 @@ main {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease;
 }
-.productos section:hover {
+.titleContainer section:hover {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
   transform: scale(1.04, 1.07);
 }
-.productos section a {
+.titleContainer section a {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -380,12 +460,12 @@ main {
   font-family: "Maven Pro", sans-serif;
   text-decoration: none;
 }
-.productos section a img {
+.titleContainer section a img {
   width: 100%;
   height: 30vh;
   border-radius: 12px 12px 0px 0px;
 }
-.productos section a h3 {
+.titleContainer section a h3 {
   font-size: 1.3rem;
   height: 4vh;
   display: flex;
@@ -395,22 +475,17 @@ main {
 
 .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol {
   width: 100%;
-  height: 270vh;
+  max-height: 630vh;
+  min-height: auto;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-.nuestrosProductos h2, .conAlcohol h2, .otrosProductos h2, .sinAlcohol h2 {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  font-family: "Maven Pro", sans-serif;
+  gap: 3rem;
 }
 .nuestrosProductos article, .conAlcohol article, .otrosProductos article, .sinAlcohol article {
-  width: 18%;
-  height: 30vh;
+  width: 380px;
+  height: 350px;
   background-color: rgb(146, 92, 92);
   border-radius: 12px 12px 12px 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
@@ -418,87 +493,41 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 .nuestrosProductos article:hover, .conAlcohol article:hover, .otrosProductos article:hover, .sinAlcohol article:hover {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
-  transform: translateY(-4%);
 }
 .nuestrosProductos article a img, .conAlcohol article a img, .otrosProductos article a img, .sinAlcohol article a img {
   width: 100%;
-  height: 23vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px 12px 0px 0px;
 }
 .nuestrosProductos article .product img, .conAlcohol article .product img, .otrosProductos article .product img, .sinAlcohol article .product img {
   width: 100%;
-  height: 23vh;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px 12px 0px 0px;
 }
 .nuestrosProductos article p, .conAlcohol article p, .otrosProductos article p, .sinAlcohol article p {
   width: 100%;
-  height: 6vh;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1.1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.conAlcohol, .otrosProductos, .sinAlcohol {
-  height: 120vh;
-}
-
-.loNuevo {
-  width: 100%;
-  height: 55vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.loNuevo h2 {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  font-family: "Maven Pro", sans-serif;
-}
-.loNuevo article {
-  width: 18%;
-  height: 30vh;
-  background-color: rgb(146, 92, 92);
-  border-radius: 12px 12px 12px 12px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 400ms ease;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.loNuevo article:hover {
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
-  transform: translateY(-4%);
-}
-.loNuevo article a img {
-  width: 100%;
-  height: 23vh;
-  border-radius: 12px 12px 0px 0px;
-}
-.loNuevo article .product img {
-  width: 100%;
-  height: 23vh;
-  border-radius: 12px 12px 0px 0px;
-}
-.loNuevo article p {
-  width: 100%;
-  height: 6vh;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  justify-content: center;
+.nuestrosProductos article h4, .conAlcohol article h4, .otrosProductos article h4, .sinAlcohol article h4 {
+  font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
-  align-items: center;
+  color: rgb(43, 42, 42);
 }
 
 footer {
@@ -1437,11 +1466,6 @@ footer .parrafoFooter p {
     justify-content: flex-start;
   }
 }
-#inputBusqueda {
-  width: 500px;
-  height: 25px;
-}
-
 #spinner-container {
   margin-top: 4rem;
 }
