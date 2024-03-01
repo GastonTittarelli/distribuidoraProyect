@@ -180,9 +180,10 @@ main {
 }
 
 .mainIdex {
-  height: 290vh;
+  min-height: 290vh;
+  max-height: 900vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -248,12 +249,13 @@ main {
 
 .conteiner_card {
   width: 100%;
-  height: 110vh;
+  min-height: 110vh;
+  max-height: 500vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1vw;
+  gap: 1rem;
 }
 .conteiner_card h2 {
   width: 100%;
@@ -295,11 +297,13 @@ main {
 
 .nuevos_productos {
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
+  max-height: 500vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  gap: 1rem;
 }
 .nuevos_productos h2 {
   width: 100%;
@@ -311,8 +315,8 @@ main {
   font-family: "Maven Pro", sans-serif;
 }
 .nuevos_productos .nuevo_card {
-  width: 23vw;
-  height: 33vh;
+  width: 350px;
+  height: 250px;
   background-color: rgb(146, 92, 92);
   border-radius: 16px 16px 16px 16px;
   box-shadow: 5px 5px 5px 0px rgb(27, 27, 27);
@@ -324,14 +328,18 @@ main {
 }
 .nuevos_productos .nuevo_card a img {
   width: 100%;
-  height: 29vh;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 16px 16px 0px 0px;
 }
 .nuevos_productos .nuevo_card p {
   height: 3.5vh;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bolder;
+  padding-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -631,7 +639,7 @@ footer .parrafoFooter p {
 }
 
 .videoContainer {
-  width: 90vw;
+  width: 95%;
   height: 70vh;
   background-color: rgb(32, 36, 34);
   display: flex;
@@ -656,15 +664,15 @@ footer .parrafoFooter p {
   color: rgb(255, 255, 255);
 }
 .videoContainer .contactInfo a {
-  width: 13vw;
-  height: 9vh;
+  width: 180px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .videoContainer .contactInfo a img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 25px 25px 25px 25px;
   transition: transform 0.3s ease;
 }
@@ -672,8 +680,8 @@ footer .parrafoFooter p {
   transform: scale(1.05);
 }
 .videoContainer .contactInfo button {
-  width: 13vw;
-  height: 7vh;
+  width: 180px;
+  height: 48px;
   border: solid 0px;
   border-radius: 25px 25px 25px 25px;
   background-color: rgb(72, 163, 224);
@@ -697,7 +705,7 @@ footer .parrafoFooter p {
   position: absolute;
   height: 2.5rem;
   font-family: Maven Pro;
-  width: 13vw;
+  width: 200px;
   text-align: center;
   top: calc(100% + 20px);
   left: 20%;
@@ -867,9 +875,6 @@ footer .parrafoFooter p {
     font-size: 1rem;
   }
 }
-.nuevos_productos .nuevo_card {
-  width: 25vw;
-}
 .nuevos_productos .nuevo_card p {
   font-size: 1.1rem;
 }
@@ -914,21 +919,6 @@ footer .parrafoFooter p {
 @media screen and (max-width: 1276px) {
   header nav ul li a:nth-child(1).activo {
     transform: scale(1, 1.1);
-  }
-  .mainIdex {
-    height: 260vh;
-  }
-  .conteiner_card {
-    height: 140vh;
-  }
-  .conteiner_card .card {
-    width: 35vw;
-  }
-  .nuevos_productos {
-    height: 100vh;
-  }
-  .nuevos_productos .nuevo_card {
-    width: 35vw;
   }
   .mainAcercaDe {
     height: 300vh;
@@ -990,10 +980,16 @@ footer .parrafoFooter p {
   .mapa iframe {
     width: 50vw;
   }
+  .conteiner_card {
+    padding-bottom: 1rem;
+  }
+  .nuevos_productos {
+    padding-bottom: 1rem;
+  }
 }
 @media screen and (max-width: 1152px) {
   header nav ul {
-    gap: 6rem;
+    gap: 2rem;
   }
   footer .redes a img {
     height: 4vh;
@@ -1045,25 +1041,14 @@ footer .parrafoFooter p {
 }
 @media screen and (max-width: 958px) {
   header nav ul {
-    gap: 5rem;
+    min-width: 20vw;
+    gap: 2rem;
   }
   header nav ul li {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
-  .mainIdex {
-    height: 420vh;
-  }
-  .conteiner_card {
-    height: 250vh;
-  }
-  .conteiner_card .card {
-    width: 51vw;
-  }
-  .nuevos_productos {
-    height: 140vh;
-  }
-  .nuevos_productos .nuevo_card {
-    width: 51vw;
+  header nav ul .productos-dropdown .submenu li a {
+    font-size: 0.7rem;
   }
   footer .redes {
     width: 20%;
@@ -1097,26 +1082,17 @@ footer .parrafoFooter p {
   }
 }
 @media screen and (max-width: 814px) {
-  header nav ul {
-    gap: 3.6rem;
+  header nav ul li a {
+    font-size: 0.8rem;
+  }
+  header nav ul .productos-dropdown .submenu li a {
+    font-size: 0.6rem;
   }
   .carousel-inner {
     width: 100vw;
   }
   .nuestroContacto a img {
     width: 80px;
-  }
-  .formulario form fieldset {
-    width: 270px;
-  }
-  .formulario form fieldset .datosPersonales input {
-    width: 250px;
-  }
-  .formulario form fieldset .datosPersonales select {
-    width: 250px;
-  }
-  .formulario form fieldset .boton {
-    width: 20vw;
   }
   .mainAcercaDe {
     height: 280vh;
@@ -1176,6 +1152,56 @@ footer .parrafoFooter p {
   .mapa iframe {
     width: 65vw;
   }
+  .videoContainer {
+    width: 95%;
+    height: 75vh;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .videoContainer .contactInfo {
+    height: 17vh;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .videoContainer .contactInfo p {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .videoContainer .contactInfo a {
+    width: 120px;
+    height: 35px;
+  }
+  .videoContainer .contactInfo button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+  .videoContainer .contactInfo .tooltip {
+    position: relative;
+  }
+  .videoContainer .contactInfo .tooltip .llamada {
+    color: white;
+    background-color: gray;
+  }
+  .videoContainer .contactInfo .tooltip .tooltip-text {
+    top: calc(80% + 10px);
+    left: 50%;
+    font-size: 0.8rem;
+  }
+  .videoContainer .productsVideo {
+    width: 80%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+  .nuevos_productos {
+    margin-top: 4rem;
+  }
 }
 @media screen and (max-width: 674px) {
   header {
@@ -1193,7 +1219,7 @@ footer .parrafoFooter p {
   header #menu-check:checked ~ nav {
     display: block;
     width: 14.5rem;
-    height: 17rem;
+    height: 23rem;
     border-radius: 8px;
     top: 0.5em;
     right: 0.3em;
@@ -1221,24 +1247,95 @@ footer .parrafoFooter p {
     height: 100%;
     background-color: rgb(26, 26, 26);
     padding-top: 1rem;
-    padding-right: 3.5rem;
+    padding-left: 2rem;
     opacity: 1;
     color: white;
+    z-index: 999;
   }
   header nav ul {
     display: block;
     text-align: right;
     font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
   }
   header nav ul li {
-    display: block;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
     text-align: right;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: solid white 1px;
+    transition: border-top-color 0.01s ease;
+    padding-top: 1px;
+  }
+  header nav ul li a {
     font-size: 0.9rem;
-    margin-top: 1.5rem;
+    text-align: left;
   }
   header nav ul li a:nth-child(1).activo {
     color: rgb(154, 151, 245);
     transform: none;
+  }
+  header nav ul li:active {
+    border-top-color: rgb(134, 130, 243);
+  }
+  header nav ul .productos-dropdown {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  header nav ul .productos-dropdown .shadow-link {
+    height: 17%;
+  }
+  header nav ul .productos-dropdown .submenu {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    align-items: flex-start;
+    height: 83%;
+    top: 0.01px;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    padding-top: 0px;
+    margin-top: 0;
+    animation-name: none;
+    overflow: visible;
+  }
+  header nav ul .productos-dropdown .submenu li {
+    margin-bottom: 0px;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    border-top: transparent;
+    padding-left: 5px;
+  }
+  header nav ul .productos-dropdown .submenu li a {
+    font-size: 0.8rem;
+  }
+  header nav ul .productos-dropdown:hover .submenu {
+    display: flex;
+    position: static;
+    min-height: 83%;
   }
   .contenedorInfoHistoria .historia .historiaText h2 {
     text-align: center;
@@ -1268,14 +1365,8 @@ footer .parrafoFooter p {
   footer .redes a img {
     height: 3vh;
   }
-  .conteiner_card .card {
-    width: 70vw;
-  }
   .conteiner_card .card p {
     font-size: 0.8rem;
-  }
-  .nuevos_productos .nuevo_card {
-    width: 75vw;
   }
   .nuevos_productos .nuevo_card p {
     font-size: 0.8rem;
@@ -1425,18 +1516,30 @@ footer .parrafoFooter p {
   .nuestroContacto a img {
     width: 40px;
   }
-  .formulario form fieldset {
-    width: 220px;
+  .videoContainer {
+    min-height: 80vh;
   }
-  .formulario form fieldset .datosPersonales input {
-    width: 200px;
+  .videoContainer .contactInfo {
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
-  .formulario form fieldset .datosPersonales select {
-    width: 200px;
+  .videoContainer .contactInfo p {
+    font-size: 1.3rem;
   }
-  .formulario form fieldset .boton {
-    width: 30vw;
-    height: 4vh;
+  .videoContainer .contactInfo a {
+    width: 140px;
+    height: 43px;
+  }
+  .videoContainer .contactInfo button {
+    width: 140px;
+    height: 43px;
+    font-size: 0.8rem;
+  }
+  .videoContainer .productsVideo {
+    width: 95%;
   }
 }
 @media screen and (max-width: 402px) {

@@ -41,7 +41,7 @@
 
                 <li class="productos-dropdown">
                     <a class="shadow-link" href="./pages/nuestrosProductos.html">Nuestros productos</a>
-                    <ul class="submenu">
+                    <ul class="submenu" id="contenedor">
                         <li><a href="./pages/conAlcohol.html">Con alcohol</a></li>
                         <li><a href="./pages/sinAlcohol.html">Sin alcohol</a></li>
                         <li><a href="./pages/otrosProductos.html">Otros productos</a></li>
@@ -65,7 +65,7 @@
                 </div>
                 
                 <div class="tooltip">
-                    <button class="llamada" onclick="mostrarTooltip()">Llamar ahora</button>
+                    <button class="llamada">Llamar ahora</button>
                     <div id="tooltipText" class="tooltip-text">Teléfono: 1234567890</div>
                 </div>
         
@@ -171,7 +171,6 @@
 </script> -->
 
 <script>
-    // Obtener el elemento del tooltip y el botón
 const tooltip = document.getElementById("tooltipText");
 const boton = document.querySelector(".llamada");
 
@@ -197,6 +196,21 @@ boton.addEventListener("click", toggleTooltip);
 // Agregar un controlador de eventos de clic al documento para ocultar el tooltip si se hace clic fuera del botón
 document.addEventListener("click", ocultarTooltip);
 </script>
+
+
+<!-- <script>
+    document.addEventListener('click', function(event) {
+    const contenedor = document.getElementById('contenedor');
+    const target = event.target;
+
+    // Verifica si el clic no está dentro del contenedor y tampoco dentro de su descendencia
+    if (!contenedor.contains(target)) {
+        // Oculta el contenido del contenedor
+        contenedor.style.overflow = 'hidden';
+    }
+});
+</script> -->
+
 
 </body>
 

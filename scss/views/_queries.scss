@@ -14,7 +14,7 @@
 .nuevos_productos {
 
     .nuevo_card {
-        width: 25vw;
+        // width: 25vw;
 
         p {
             font-size: 1.1rem;
@@ -113,25 +113,25 @@
         }
     }
 
-    .mainIdex {
-        height: 260vh;
-    }
+    // .mainIdex {
+    //     height: 260vh;
+    // }
 
-    .conteiner_card {
-        height: 140vh;
+    // .conteiner_card {
+    //     height: 140vh;
 
-        .card {
-            width: 35vw;
-        }
-    }
+    //     .card {
+    //         width: 35vw;
+    //     }
+    // }
 
-    .nuevos_productos {
-        height: 100vh;
+    // .nuevos_productos {
+    //     height: 100vh;
 
-        .nuevo_card {
-            width: 35vw;
-        }
-    }
+    //     .nuevo_card {
+    //         width: 35vw;
+    //     }
+    // }
 
     .mainAcercaDe {
         height: 300vh;
@@ -208,13 +208,21 @@
     .mapa iframe {
         width: 50vw;
     }
+
+    .conteiner_card {
+        padding-bottom: 1rem;
+    }
+
+    .nuevos_productos {
+        padding-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width:1152px) {
     header{
         nav{
             ul{
-                gap:6rem
+                gap:2rem
             }
         }
     }
@@ -305,34 +313,44 @@
     header{
         nav{
             ul{
-                gap: 5rem;
+                min-width: 20vw;
+                gap: 2rem;
 
                 li{
-                        font-size: .8rem;
+                        font-size: 1rem;
                 }
                 
+                .productos-dropdown{
+                    .submenu {
+                        li{
+                            a{
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-    .mainIdex {
-        height: 420vh;
-    }
+    // .mainIdex {
+    //     height: 420vh;
+    // }
 
-    .conteiner_card {
-        height: 250vh;
+    // .conteiner_card {
+    //     height: 250vh;
 
-        .card {
-            width: 51vw;
-        }
-    }
+    //     .card {
+    //         width: 51vw;
+    //     }
+    // }
 
-    .nuevos_productos {
-        height: 140vh;
+    // .nuevos_productos {
+    //     height: 140vh;
 
-        .nuevo_card {
-            width: 51vw;
-        }
-    }
+    //     .nuevo_card {
+    //         width: 51vw;
+    //     }
+    // }
 
     footer {
         .redes {
@@ -375,6 +393,8 @@
             width: 22vw;
         }
     }
+
+
 }
 
 
@@ -382,7 +402,23 @@
     header{
         nav{
             ul{
-                gap: 3.6rem;
+                
+                li{
+                    
+                    
+                    a{
+                        font-size: 0.8rem;
+                    }
+                }
+                .productos-dropdown{
+                    .submenu {
+                        li{
+                            a{
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -398,27 +434,6 @@
         }
     }
 
-    .formulario {
-        form {
-            fieldset {
-                width: 270px;
-
-                .datosPersonales {
-                    input {
-                        width: 250px;
-                    }
-
-                    select {
-                        width: 250px;
-                    }
-                }
-
-                .boton {
-                    width: 20vw;
-                }
-            }
-        }
-    }
 
     .mainAcercaDe {
         height: 280vh;
@@ -512,6 +527,73 @@
             width: 65vw;
         }
     }
+
+
+    .videoContainer {
+        width: 95%; 
+        height: 75vh;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+        .contactInfo{
+            height: 17vh;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+    
+            p{
+                width: 100%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: flex-end;
+            }
+    
+            a{
+                width: 120px;
+                height: 35px;
+                
+            }
+            button{
+                width: 120px;
+                height: 35px;
+                font-size: 0.7rem;
+            }
+            
+            .tooltip {
+                position: relative;
+    
+                .llamada {
+                    color: white;
+                    background-color: gray;
+                    
+                }
+                
+                .tooltip-text {
+                    top: calc(80% + 10px); 
+                    left: 50%;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        
+        .productsVideo{
+            width: 80%; 
+            height: auto; 
+            display: block;
+            border-radius: 5px;
+            
+    
+            
+        }
+    }
+
+    .nuevos_productos{
+        margin-top: 4rem;
+    }
+
 }
 
 @media screen and (max-width:674px) {
@@ -533,7 +615,7 @@
         #menu-check:checked~nav {
             display: block;
             width: 14.5rem;
-            height: 17rem;
+            height: 23rem;
             border-radius: 8px;
             top: .5em;
             right: .3em;
@@ -565,30 +647,102 @@
             height: 100%;
             background-color: rgb(26, 26, 26);
             padding-top: 1rem;
-            padding-right: 3.5rem;
+            padding-left: 2rem;
             opacity: 1;
             color: white;
+            z-index: 999;
 
             ul {
                 display: block;
                 text-align: right;
                 font-size: 1.1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                gap: 0.5rem;
+                height: 100%;
+                width: 100%;
+                padding-top: 1rem;
                 
 
                 li {
-                    display: block;
+                    height: fit-content;
+                    width: 100%;
                     text-align: right;
-                    font-size: .9rem;
-                    margin-top: 1.5rem;
-                    
+                    font-size: 1rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-top: solid white 1px;
+                    transition: border-top-color 0.01s ease;
+                    padding-top: 1px;
 
                     a{
+                        font-size: 0.9rem;
+                        text-align: left;
                         &:nth-child(1).activo{
                             color: rgb(154, 151, 245);
                             transform: none;
                         }
                     }
+                    &:active{
+                
+                        border-top-color: rgb(134, 130, 243);;
+                    }
                 }
+                
+                .productos-dropdown {
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    .shadow-link{
+                        height: 17%;
+                    }
+                    .submenu {
+                        z-index: 1;
+                        position: relative;
+                        display: flex; 
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 14px;
+                        align-items: flex-start;
+                        height: 83%;
+                        top: 0.01px; 
+                        width: 100%;
+                        background-color: transparent; 
+                        box-shadow: none; 
+                        padding-top: 0px; 
+                        margin-top: 0;
+                        animation-name: none;
+                        overflow: visible;
+
+                        li{
+                            margin-bottom: 0px;
+                            width: fit-content;
+                            line-height: 10px;
+                            height: fit-content;
+                            display: flex;
+                            border-top: transparent;
+                            padding-left: 5px;
+                            a{
+                                font-size: 0.8rem;
+                            }
+                        }
+
+                    }
+                    &:hover .submenu{
+                        display: flex; 
+                        position: static;
+                        min-height: 83%;
+                    }
+                    
+                }
+
+            
             }
         }
     }
@@ -639,7 +793,7 @@
         }
     .conteiner_card {
         .card {
-            width: 70vw;
+            // width: 70vw;
 
             p {
                 font-size: .8rem;
@@ -650,7 +804,7 @@
 
     .nuevos_productos {
         .nuevo_card {
-            width: 75vw;
+            // width: 75vw;
 
             p {
                 font-size: .8rem;
@@ -867,26 +1021,31 @@
         }
     }
 
-    .formulario {
-        form {
-            fieldset {
-                width: 220px;
 
-                .datosPersonales {
-                    input {
-                        width: 200px;
-                    }
-
-                    select {
-                        width: 200px;
-                    }
-                }
-
-                .boton {
-                    width: 30vw;
-                    height: 4vh;
-                }
+    .videoContainer {
+        min-height: 80vh;
+        
+        .contactInfo{
+            height: 50vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            p{
+                font-size: 1.3rem;
             }
+            a{
+                width: 140px;
+                height: 43px;
+            }
+            button{
+                width: 140px;
+                height: 43px;
+                font-size: 0.8rem;
+            }
+        }
+        .productsVideo{
+            width: 95%;
         }
     }
 }
