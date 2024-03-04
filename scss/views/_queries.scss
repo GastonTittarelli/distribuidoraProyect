@@ -133,12 +133,14 @@
     //     }
     // }
 
-    .mainAcercaDe {
-        height: 300vh;
-    }
+    // .mainAcercaDe {
+    //     height: 300vh;
+    // }
 
     .contenedorInfoHistoria {
-        height: 210vh;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        gap: 1.5rem;
 
         .historia {
             height: 100vh;
@@ -150,23 +152,29 @@
                 height: 45vh;
                 align-items: center;
 
-                p,
+                
                 h2 {
+                    font-size: 1.6rem;
                     margin: 0;
+                }
+
+                p{
+                    font-size: 1.3rem;
+                    margin-left: 0;
                 }
             }
 
             .historiaImg {
-                height: 51vh;
-                width: 39vw;
+                height: auto;
+                width: 100vw;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                img {
-                    width: 39vw;
-                    height: 51vh;
-                }
+                // img {
+                //     width: 39vw;
+                //     height: 51vh;
+                // }
             }
         }
     }
@@ -180,29 +188,26 @@
             height: 45vh;
             align-items: center;
 
-            div {
+            .textos {
+                
                 h2 {
                     padding-bottom: 1rem;
                     margin: 0 1rem 0 1rem;
                     width: 90vw;
+                    font-size: 1.6rem;
                 }
 
                 p {
                     margin: 0 1rem 0 1rem;
                     width: 90vw;
+                    font-size: 1.3rem;
                 }
             }
         }
-
-        .video {
-            height: 46vh;
-            width: 39vw;
-
-            iframe {
-                width: 38vw;
-                height: 45vh;
-            }
+        .carousel{
+            width: 60%;
         }
+        
     }
 
     .mapa iframe {
@@ -236,9 +241,9 @@
             }
         }
 
-    .mainProductos {
-        height: 320vh;
-    }
+    // .mainProductos {
+    //     height: 320vh;
+    // }
 
     .productos {
         height: 50vh;
@@ -260,53 +265,53 @@
         }
     }
 
-    .conAlcohol {
-        article {
-            height: 25vh;
+    // .conAlcohol {
+    //     article {
+    //         height: 25vh;
 
-            a {
-                img {
-                    height: 18vh;
-                }
+    //         a {
+    //             img {
+    //                 height: 18vh;
+    //             }
 
-                p {
-                    font-size: .9rem;
-                }
-            }
-        }
-    }
+    //             p {
+    //                 font-size: .9rem;
+    //             }
+    //         }
+    //     }
+    // }
 
-    .sinAlcohol {
-        article {
-            height: 25vh;
+//     .sinAlcohol {
+//         article {
+//             height: 25vh;
 
-            a {
-                img {
-                    height: 18vh;
-                }
+//             a {
+//                 img {
+//                     height: 18vh;
+//                 }
 
-                p {
-                    font-size: .9rem;
-                }
-            }
-        }
-    }
+//                 p {
+//                     font-size: .9rem;
+//                 }
+//             }
+//         }
+//     }
 
-    .otrosProductos {
-        article {
-            height: 25vh;
+//     .otrosProductos {
+//         article {
+//             height: 25vh;
 
-            a {
-                img {
-                    height: 18vh;
-                }
+//             a {
+//                 img {
+//                     height: 18vh;
+//                 }
 
-                p {
-                    font-size: .9rem;
-                }
-            }
-        }
-    }
+//                 p {
+//                     font-size: .9rem;
+//                 }
+//             }
+//         }
+//     }
 }
 
 @media screen and (max-width:958px) {
@@ -366,33 +371,33 @@
         width: 80vw;
     }
 
-    .mainProductos {
-        height: 420vh;
-    }
+    // .mainProductos {
+    //     height: 420vh;
+    // }
 
-    .conAlcohol {
-        height: 100vh;
+    // .conAlcohol {
+    //     height: 100vh;
 
-        article {
-            width: 22vw;
-        }
-    }
+    //     article {
+    //         width: 22vw;
+    //     }
+    // }
 
-    .sinAlcohol {
-        height: 100vh;
+    // .sinAlcohol {
+    //     height: 100vh;
 
-        article {
-            width: 22vw;
-        }
-    }
+    //     article {
+    //         width: 22vw;
+    //     }
+    // }
 
-    .otrosProductos {
-        height: 100vh;
+    // .otrosProductos {
+    //     height: 100vh;
 
-        article {
-            width: 22vw;
-        }
-    }
+    //     article {
+    //         width: 22vw;
+    //     }
+    // }
 
 
 }
@@ -435,35 +440,27 @@
     }
 
 
-    .mainAcercaDe {
-        height: 280vh;
-    }
+    // .mainAcercaDe {
+    //     height: 280vh;
+    // }
 
     .contenedorInfoHistoria {
-        height: 205vh;
+        // height: 205vh;
 
         .historia {
-            height: 100vh;
+            // height: 100vh;
 
             .historiaText {
-                height: 45vh;
+                // height: 45vh;
 
                 h2 {
-                    padding: 1rem;
+                    padding-left: 1rem;
+                    font-size: 1.3rem;
                 }
 
                 p {
-                    padding: 1rem;
-                }
-            }
-
-            .historiaImg {
-                height: 51vh;
-                width: 65vw;
-
-                img {
-                    width: 63vw;
-                    height: 51vh;
+                    padding-left: 1rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -473,18 +470,24 @@
         .infoText {
             align-items: center;
 
-            div {
+            .textos {
                 p {
                     margin-left: 1rem;
                     margin-right: 1rem;
                     padding: 0 1rem 0 1rem;
                     width: 95vw;
+                    font-size: 1rem;
                 }
 
                 h2{
                     padding-left: 1rem;
+                    font-size: 1.3rem;
                 }
             }
+        }
+
+        .carousel{
+            width: 90%;
         }
 
         .video {
@@ -498,29 +501,29 @@
         }
     }
 
-    .conAlcohol {
-        article {
-            p {
-                font-size: .7rem;
-            }
-        }
-    }
+    // .conAlcohol {
+    //     article {
+    //         p {
+    //             font-size: .7rem;
+    //         }
+    //     }
+    // }
 
-    .sinAlcohol {
-        article {
-            p {
-                font-size: .7rem;
-            }
-        }
-    }
+    // .sinAlcohol {
+    //     article {
+    //         p {
+    //             font-size: .7rem;
+    //         }
+    //     }
+    // }
 
-    .otrosProductos {
-        article {
-            p {
-                font-size: .7rem;
-            }
-        }
-    }
+    // .otrosProductos {
+    //     article {
+    //         p {
+    //             font-size: .7rem;
+    //         }
+    //     }
+    // }
 
     .mapa {
         iframe {
@@ -749,6 +752,7 @@
 
     .contenedorInfoHistoria {
         .historia {
+            min-height: 60vh;
             .historiaText {
                 h2 {
                     text-align: center;
@@ -758,9 +762,11 @@
         }
 
         .infoDistribucion {
-            height: 140vh;
+            min-height: 60vh;
+            gap: 0.5rem;
             .infoText {
-                height: 60vh;
+                padding-bottom: 0;
+                margin-bottom: 0;
                 h2 {
                     text-align: center;
                     margin: 0;
@@ -818,25 +824,13 @@
         }
     }
 
-    .contenedorInfoHistoria {
-        .historia {
-            .historiaText {
-                height: 63vh;
-            }
-
-            .historiaImg {
-                height: 37vh;
-
-                img {
-                    height: 37vh;
-                }
-            }
+    .titleContainer{
+        #inputBusqueda{
+            width: 90%;
         }
+
     }
 
-    .mainProductos {
-        height: 600vh;
-    }
 
     .productos {
         height: 110vh;
@@ -846,57 +840,23 @@
         }
     }
 
-    .conAlcohol {
-        height: 160vh;
-
-        article {
-            width: 45vw;
-
-            p {
-                font-size: .9rem;
-            }
-        }
-    }
-
-    .sinAlcohol {
-        height: 160vh;
-
-        article {
-            width: 45vw;
-
-            p {
-                font-size: .9rem;
-            }
-        }
-    }
-
-    .otrosProductos {
-        height: 160vh;
-
-        article {
-            width: 45vw;
-
-            p {
-                font-size: .9rem;
-            }
-        }
-    }
-
     .mapa {
-        h3 {
-            font-size: 1.1rem;
-        }
-
-        iframe {
-            width: 75vw;
-        }
-
-        .direction {
-            font-size: .9rem;
+        #map-content{
+            width: 90%;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            .mapa {
+                h3 {
+                    font-size: 1.1rem;
+                }
+        
+                .direction {
+                    font-size: .9rem;
+                }
+            }
         }
     }
 }
-
 @media screen and (max-width:518px) {
     footer {
         .redes {
@@ -904,53 +864,48 @@
         }
     }
 
-    .mainAcercaDe {
-        height: 290vh;
-    }
 
     .contenedorInfoHistoria {
-        height: 245vh;
-
         .historia {
-            height: 110vh;
-
             .historiaText {
-                height: 73vh;
-
+                
+                height: auto;
+                h2{
+                    margin-top: 0.5rem;
+                }
                 p {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
+                    padding-top: 0.5rem;
                 }
             }
 
-            .historiaImg {
-                width: 75vw;
-
-                img {
-                    width: 75vw;
-                }
-            }
+            
         }
         .infoDistribucion {
-            height: 120vh;
-
+            
             .infoText {
-                height: 75vh;
+                
+                margin: 0;
+                
             }
-
-            .video {
-                height: 40vh;
-                width: 90vw;
-
-                iframe {
-                    height: 39vh;
-                    width: 85vw;
-                }
-            }
-        }
     }
+}
+
+
+.historiaImg {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        width: fit-content;
+        height: 80%;
+    }
+}
+
 
     .mainProductos {
-        height: 500vh;
+        // height: 500vh;
 
         .conAlcohol {
             height: 130vh;
@@ -1048,6 +1003,22 @@
             width: 95%;
         }
     }
+
+    .titleContainer{
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+
+    .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol{
+
+        article{
+            width: 300px;
+            height: 350px;
+        }
+    }
+
+
 }
 
 @media screen and (max-width:402px) {
@@ -1070,8 +1041,22 @@
         }
     }
 
+    
     .contenedorInfoHistoria {
+            .historia{
+                .historiaText{
+                    p {
+                        margin: 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+            
+        
+        
         .infoDistribucion {
+            max-height: 75vh;
+            background-color: cyan;
             .infoText {
                 p {
                     margin: 0;

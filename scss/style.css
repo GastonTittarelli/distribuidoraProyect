@@ -189,12 +189,13 @@ main {
 
 .mainAcercaDe {
   width: 100%;
-  height: 135vh;
+  min-height: 135vh;
+  max-height: 800vh;
 }
 
 .mainProductos, .cAlcohol, .sAlcohol, .oProductos {
   width: 100%;
-  max-height: 670vh;
+  max-height: auto;
   min-height: auto;
   display: flex;
   gap: 4rem;
@@ -202,11 +203,8 @@ main {
 
 .mainUbicacion {
   width: 100%;
-  height: 65vh;
-}
-
-.mainContacto {
-  width: 100%;
+  min-height: 65vh;
+  max-height: auto;
 }
 
 .contenedorUbicacion {
@@ -483,8 +481,8 @@ main {
 
 .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol {
   width: 100%;
-  max-height: 630vh;
-  min-height: auto;
+  max-height: auto;
+  min-height: 50vh;
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -725,7 +723,8 @@ footer .parrafoFooter p {
 
 .contenedorInfoHistoria {
   width: 100%;
-  height: 130vh;
+  min-height: 130vh;
+  max-height: 600vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -768,7 +767,8 @@ footer .parrafoFooter p {
 }
 
 .infoDistribucion {
-  height: 52vh;
+  min-height: 52vh;
+  max-height: 600vh;
   width: 95%;
   display: flex;
   justify-content: space-around;
@@ -784,10 +784,10 @@ footer .parrafoFooter p {
   justify-content: space-between;
   padding-top: 0.5rem;
 }
-.infoDistribucion .infoText div {
+.infoDistribucion .infoText .textos {
   height: 50%;
 }
-.infoDistribucion .infoText div h2 {
+.infoDistribucion .infoText .textos h2 {
   width: 100%;
   font-family: "Maven Pro", sans-serif;
   font-size: 1.4rem;
@@ -795,7 +795,7 @@ footer .parrafoFooter p {
   margin-left: 0.5rem;
   color: white;
 }
-.infoDistribucion .infoText div p {
+.infoDistribucion .infoText .textos p {
   font-size: 1.3rem;
   width: 94%;
   line-height: 2;
@@ -813,7 +813,9 @@ footer .parrafoFooter p {
   align-items: center;
 }
 .mapa #map-content {
-  height: 63vh;
+  min-height: 63vh;
+  max-height: auto;
+  width: 500px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -824,7 +826,7 @@ footer .parrafoFooter p {
   padding-top: 0.9rem;
 }
 .mapa #map-content iframe {
-  width: 35vw;
+  width: 100%;
   height: 45vh;
   padding-top: 0.9rem;
 }
@@ -860,6 +862,7 @@ footer .parrafoFooter p {
 
 .carousel {
   width: 48%;
+  max-height: 90%;
 }
 
 .carousel-inner {
@@ -920,11 +923,10 @@ footer .parrafoFooter p {
   header nav ul li a:nth-child(1).activo {
     transform: scale(1, 1.1);
   }
-  .mainAcercaDe {
-    height: 300vh;
-  }
   .contenedorInfoHistoria {
-    height: 210vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    gap: 1.5rem;
   }
   .contenedorInfoHistoria .historia {
     height: 100vh;
@@ -936,20 +938,20 @@ footer .parrafoFooter p {
     height: 45vh;
     align-items: center;
   }
-  .contenedorInfoHistoria .historia .historiaText p,
   .contenedorInfoHistoria .historia .historiaText h2 {
+    font-size: 1.6rem;
     margin: 0;
   }
+  .contenedorInfoHistoria .historia .historiaText p {
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
   .contenedorInfoHistoria .historia .historiaImg {
-    height: 51vh;
-    width: 39vw;
+    height: auto;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .contenedorInfoHistoria .historia .historiaImg img {
-    width: 39vw;
-    height: 51vh;
   }
   .infoDistribucion {
     height: 100vh;
@@ -960,22 +962,19 @@ footer .parrafoFooter p {
     height: 45vh;
     align-items: center;
   }
-  .infoDistribucion .infoText div h2 {
+  .infoDistribucion .infoText .textos h2 {
     padding-bottom: 1rem;
     margin: 0 1rem 0 1rem;
     width: 90vw;
+    font-size: 1.6rem;
   }
-  .infoDistribucion .infoText div p {
+  .infoDistribucion .infoText .textos p {
     margin: 0 1rem 0 1rem;
     width: 90vw;
+    font-size: 1.3rem;
   }
-  .infoDistribucion .video {
-    height: 46vh;
-    width: 39vw;
-  }
-  .infoDistribucion .video iframe {
-    width: 38vw;
-    height: 45vh;
+  .infoDistribucion .carousel {
+    width: 60%;
   }
   .mapa iframe {
     width: 50vw;
@@ -994,9 +993,6 @@ footer .parrafoFooter p {
   footer .redes a img {
     height: 4vh;
   }
-  .mainProductos {
-    height: 320vh;
-  }
   .productos {
     height: 50vh;
   }
@@ -1009,33 +1005,6 @@ footer .parrafoFooter p {
   }
   .productos section a h3 {
     height: 4vh;
-    font-size: 0.9rem;
-  }
-  .conAlcohol article {
-    height: 25vh;
-  }
-  .conAlcohol article a img {
-    height: 18vh;
-  }
-  .conAlcohol article a p {
-    font-size: 0.9rem;
-  }
-  .sinAlcohol article {
-    height: 25vh;
-  }
-  .sinAlcohol article a img {
-    height: 18vh;
-  }
-  .sinAlcohol article a p {
-    font-size: 0.9rem;
-  }
-  .otrosProductos article {
-    height: 25vh;
-  }
-  .otrosProductos article a img {
-    height: 18vh;
-  }
-  .otrosProductos article a p {
     font-size: 0.9rem;
   }
 }
@@ -1059,27 +1028,6 @@ footer .parrafoFooter p {
   .carousel-inner {
     width: 80vw;
   }
-  .mainProductos {
-    height: 420vh;
-  }
-  .conAlcohol {
-    height: 100vh;
-  }
-  .conAlcohol article {
-    width: 22vw;
-  }
-  .sinAlcohol {
-    height: 100vh;
-  }
-  .sinAlcohol article {
-    width: 22vw;
-  }
-  .otrosProductos {
-    height: 100vh;
-  }
-  .otrosProductos article {
-    width: 22vw;
-  }
 }
 @media screen and (max-width: 814px) {
   header nav ul li a {
@@ -1094,43 +1042,30 @@ footer .parrafoFooter p {
   .nuestroContacto a img {
     width: 80px;
   }
-  .mainAcercaDe {
-    height: 280vh;
-  }
-  .contenedorInfoHistoria {
-    height: 205vh;
-  }
-  .contenedorInfoHistoria .historia {
-    height: 100vh;
-  }
-  .contenedorInfoHistoria .historia .historiaText {
-    height: 45vh;
-  }
   .contenedorInfoHistoria .historia .historiaText h2 {
-    padding: 1rem;
+    padding-left: 1rem;
+    font-size: 1.3rem;
   }
   .contenedorInfoHistoria .historia .historiaText p {
-    padding: 1rem;
-  }
-  .contenedorInfoHistoria .historia .historiaImg {
-    height: 51vh;
-    width: 65vw;
-  }
-  .contenedorInfoHistoria .historia .historiaImg img {
-    width: 63vw;
-    height: 51vh;
+    padding-left: 1rem;
+    font-size: 1rem;
   }
   .infoDistribucion .infoText {
     align-items: center;
   }
-  .infoDistribucion .infoText div p {
+  .infoDistribucion .infoText .textos p {
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 0 1rem 0 1rem;
     width: 95vw;
+    font-size: 1rem;
   }
-  .infoDistribucion .infoText div h2 {
+  .infoDistribucion .infoText .textos h2 {
     padding-left: 1rem;
+    font-size: 1.3rem;
+  }
+  .infoDistribucion .carousel {
+    width: 90%;
   }
   .infoDistribucion .video {
     height: 55vh;
@@ -1139,15 +1074,6 @@ footer .parrafoFooter p {
   .infoDistribucion .video iframe {
     width: 59vw;
     height: 48vh;
-  }
-  .conAlcohol article p {
-    font-size: 0.7rem;
-  }
-  .sinAlcohol article p {
-    font-size: 0.7rem;
-  }
-  .otrosProductos article p {
-    font-size: 0.7rem;
   }
   .mapa iframe {
     width: 65vw;
@@ -1337,15 +1263,20 @@ footer .parrafoFooter p {
     position: static;
     min-height: 83%;
   }
+  .contenedorInfoHistoria .historia {
+    min-height: 60vh;
+  }
   .contenedorInfoHistoria .historia .historiaText h2 {
     text-align: center;
     margin: 0;
   }
   .contenedorInfoHistoria .infoDistribucion {
-    height: 140vh;
+    min-height: 60vh;
+    gap: 0.5rem;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText {
-    height: 60vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText h2 {
     text-align: center;
@@ -1374,17 +1305,8 @@ footer .parrafoFooter p {
   footer .parrafoFooter {
     font-size: 0.6rem;
   }
-  .contenedorInfoHistoria .historia .historiaText {
-    height: 63vh;
-  }
-  .contenedorInfoHistoria .historia .historiaImg {
-    height: 37vh;
-  }
-  .contenedorInfoHistoria .historia .historiaImg img {
-    height: 37vh;
-  }
-  .mainProductos {
-    height: 600vh;
+  .titleContainer #inputBusqueda {
+    width: 90%;
   }
   .productos {
     height: 110vh;
@@ -1392,40 +1314,15 @@ footer .parrafoFooter p {
   .productos section {
     width: 70vw;
   }
-  .conAlcohol {
-    height: 160vh;
+  .mapa #map-content {
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-  .conAlcohol article {
-    width: 45vw;
-  }
-  .conAlcohol article p {
-    font-size: 0.9rem;
-  }
-  .sinAlcohol {
-    height: 160vh;
-  }
-  .sinAlcohol article {
-    width: 45vw;
-  }
-  .sinAlcohol article p {
-    font-size: 0.9rem;
-  }
-  .otrosProductos {
-    height: 160vh;
-  }
-  .otrosProductos article {
-    width: 45vw;
-  }
-  .otrosProductos article p {
-    font-size: 0.9rem;
-  }
-  .mapa h3 {
+  .mapa #map-content .mapa h3 {
     font-size: 1.1rem;
   }
-  .mapa iframe {
-    width: 75vw;
-  }
-  .mapa .direction {
+  .mapa #map-content .mapa .direction {
     font-size: 0.9rem;
   }
 }
@@ -1433,43 +1330,28 @@ footer .parrafoFooter p {
   footer .redes {
     width: 30%;
   }
-  .mainAcercaDe {
-    height: 290vh;
-  }
-  .contenedorInfoHistoria {
-    height: 245vh;
-  }
-  .contenedorInfoHistoria .historia {
-    height: 110vh;
-  }
   .contenedorInfoHistoria .historia .historiaText {
-    height: 73vh;
+    height: auto;
+  }
+  .contenedorInfoHistoria .historia .historiaText h2 {
+    margin-top: 0.5rem;
   }
   .contenedorInfoHistoria .historia .historiaText p {
-    font-size: 1rem;
-  }
-  .contenedorInfoHistoria .historia .historiaImg {
-    width: 75vw;
-  }
-  .contenedorInfoHistoria .historia .historiaImg img {
-    width: 75vw;
-  }
-  .contenedorInfoHistoria .infoDistribucion {
-    height: 120vh;
+    font-size: 1.1rem;
+    padding-top: 0.5rem;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText {
-    height: 75vh;
+    margin: 0;
   }
-  .contenedorInfoHistoria .infoDistribucion .video {
-    height: 40vh;
-    width: 90vw;
+  .historiaImg {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .contenedorInfoHistoria .infoDistribucion .video iframe {
-    height: 39vh;
-    width: 85vw;
-  }
-  .mainProductos {
-    height: 500vh;
+  .historiaImg img {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 80%;
   }
   .mainProductos .conAlcohol {
     height: 130vh;
@@ -1541,6 +1423,13 @@ footer .parrafoFooter p {
   .videoContainer .productsVideo {
     width: 95%;
   }
+  .titleContainer h2 {
+    font-size: 1.2rem;
+  }
+  .nuestrosProductos article, .conAlcohol article, .otrosProductos article, .sinAlcohol article {
+    width: 300px;
+    height: 350px;
+  }
 }
 @media screen and (max-width: 402px) {
   footer .parrafoFooter {
@@ -1552,6 +1441,14 @@ footer .parrafoFooter p {
   }
   .nuevos_productos .nuevo_card {
     width: 85vw;
+  }
+  .contenedorInfoHistoria .historia .historiaText p {
+    margin: 0;
+    padding-left: 0;
+  }
+  .contenedorInfoHistoria .infoDistribucion {
+    max-height: 75vh;
+    background-color: cyan;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText p {
     margin: 0;

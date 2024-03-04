@@ -17,12 +17,13 @@ main {
 
 .mainAcercaDe {
     width: 100%;
-    height: 135vh;
+    min-height: 135vh;
+    max-height: 800vh;
 }
 
 .mainProductos, .cAlcohol, .sAlcohol, .oProductos {
     width: 100%;
-    max-height: 670vh;
+    max-height: auto;
     min-height: auto;
     display: flex;
     gap: 4rem;
@@ -30,9 +31,7 @@ main {
 
 .mainUbicacion {
     width: 100%;
-    height: 65vh;
+    min-height: 65vh;
+    max-height: auto;
 }
 
-.mainContacto {
-    width: 100%;
-}
