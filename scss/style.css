@@ -929,7 +929,7 @@ footer .parrafoFooter p {
     gap: 1.5rem;
   }
   .contenedorInfoHistoria .historia {
-    height: 100vh;
+    height: auto;
     flex-wrap: wrap;
     gap: 0;
   }
@@ -939,22 +939,26 @@ footer .parrafoFooter p {
     align-items: center;
   }
   .contenedorInfoHistoria .historia .historiaText h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin: 0;
   }
   .contenedorInfoHistoria .historia .historiaText p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-left: 0;
   }
   .contenedorInfoHistoria .historia .historiaImg {
-    height: auto;
+    height: 55vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .contenedorInfoHistoria .historia .historiaImg img {
+    width: auto;
+    height: 100%;
+  }
   .infoDistribucion {
-    height: 100vh;
+    height: 120vh;
     flex-wrap: wrap;
   }
   .infoDistribucion .infoText {
@@ -966,15 +970,17 @@ footer .parrafoFooter p {
     padding-bottom: 1rem;
     margin: 0 1rem 0 1rem;
     width: 90vw;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .infoDistribucion .infoText .textos p {
     margin: 0 1rem 0 1rem;
     width: 90vw;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .infoDistribucion .carousel {
-    width: 60%;
+    width: 70%;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .mapa iframe {
     width: 50vw;
@@ -992,6 +998,9 @@ footer .parrafoFooter p {
   }
   footer .redes a img {
     height: 4vh;
+  }
+  .contenedorInfoHistoria .historia .historiaText {
+    margin-top: 1rem;
   }
   .productos {
     height: 50vh;
@@ -1266,6 +1275,9 @@ footer .parrafoFooter p {
   .contenedorInfoHistoria .historia {
     min-height: 60vh;
   }
+  .contenedorInfoHistoria .historia .historiaText {
+    padding-top: 2rem;
+  }
   .contenedorInfoHistoria .historia .historiaText h2 {
     text-align: center;
     margin: 0;
@@ -1325,6 +1337,9 @@ footer .parrafoFooter p {
   .mapa #map-content .mapa .direction {
     font-size: 0.9rem;
   }
+  .contenedorInfoHistoria .historia .historiaText {
+    margin-top: 1rem;
+  }
 }
 @media screen and (max-width: 518px) {
   footer .redes {
@@ -1341,7 +1356,12 @@ footer .parrafoFooter p {
     padding-top: 0.5rem;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText {
+    height: auto;
     margin: 0;
+    gap: 2rem;
+  }
+  .contenedorInfoHistoria .infoDistribucion .infoText .textos {
+    padding-top: 0;
   }
   .historiaImg {
     height: auto;
@@ -1445,10 +1465,6 @@ footer .parrafoFooter p {
   .contenedorInfoHistoria .historia .historiaText p {
     margin: 0;
     padding-left: 0;
-  }
-  .contenedorInfoHistoria .infoDistribucion {
-    max-height: 75vh;
-    background-color: cyan;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText p {
     margin: 0;
