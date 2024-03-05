@@ -1059,6 +1059,15 @@ footer .parrafoFooter p {
     padding-left: 1rem;
     font-size: 1rem;
   }
+  .contenedorInfoHistoria .historia .historiaImg {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenedorInfoHistoria .historia .historiaImg img {
+    height: 80%;
+  }
   .infoDistribucion .infoText {
     align-items: center;
   }
@@ -1363,16 +1372,6 @@ footer .parrafoFooter p {
   .contenedorInfoHistoria .infoDistribucion .infoText .textos {
     padding-top: 0;
   }
-  .historiaImg {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .historiaImg img {
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 80%;
-  }
   .mainProductos .conAlcohol {
     height: 130vh;
   }
@@ -1465,6 +1464,15 @@ footer .parrafoFooter p {
   .contenedorInfoHistoria .historia .historiaText p {
     margin: 0;
     padding-left: 0;
+  }
+  .contenedorInfoHistoria .historia .historiaImg {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenedorInfoHistoria .historia .historiaImg img {
+    height: 80%;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText p {
     margin: 0;

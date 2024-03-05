@@ -471,9 +471,21 @@
                     font-size: 1rem;
                 }
             }
+
+            
+                    .historiaImg {
+                        height: auto;
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                    
+                        img {
+                            // width: 50px;
+                            height: 80%;
+                        }
         }
     }
-
+    }
     .infoDistribucion {
         .infoText {
             align-items: center;
@@ -910,16 +922,16 @@
 }
 
 
-.historiaImg {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
+// .historiaImg {
+//     height: auto;
+//     display: flex;
+//     flex-wrap: wrap;
 
-    img {
-        width: fit-content;
-        height: 80%;
-    }
-}
+//     img {
+//         width: fit-content;
+//         height: 80%;
+//     }
+// }
 
 
     .mainProductos {
@@ -1068,9 +1080,21 @@
                         padding-left: 0;
                     }
                 }
+
+                .historiaImg {
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                
+                    img {
+                        // width: 50px;
+                        height: 80%;
+                    }
+                }
             }
             
-        
+            
         
         .infoDistribucion {
             // max-height: 75vh;
@@ -1098,4 +1122,18 @@
     .whatsapp {
         justify-content: flex-start;
     }
+
+    
 }
+
+
+// @media screen and (max-width:380px) {
+
+//     .historiaImg {
+//         background-color: aqua;
+//         img {
+//             height: auto;
+//             width: 80%;
+//         }
+//     }
+// }
