@@ -7,6 +7,7 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
+
     h2 {
         width: 100%;
         font-size: 1.5rem;
@@ -48,11 +49,9 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-
         }
     }
 }
-
 
 .nuevos_productos {
     width: 100%;
@@ -113,9 +112,11 @@
     width: 95%;
     margin-top: 1rem;
     display: flex;
+
     .middle {
         transform: translate(-1%, -1%);
         text-align: center;
+
             a{
                 .btn {
                     background-color: transparent;
@@ -183,23 +184,23 @@
             text-align: center;
             font-size: 1.8rem;
             font-family: 'Maven Pro', sans-serif;
-            
             animation-name: pulse; 
             animation-duration: 5s; 
             animation-iteration-count: infinite; 
             
             @keyframes pulse {
                 0% {
-                    transform: scale(1); /* Tamaño original del elemento */
+                    transform: scale(1); 
                 }
                 50% {
-                    transform: scale(1.08); /* Aumentar el tamaño del elemento*/
+                    transform: scale(1.08); 
                 }
                 100% {
                     transform: scale(1); /* Volver al tamaño original del elemento */
                 }
             }
         }
+
         #inputBusqueda{
             padding: 12px;
             border: 2px solid black;
@@ -214,10 +215,7 @@
                 border-color: rgb(134, 130, 243);
             }
         }
-    
 
-    
-    
         section {
         width: 25vw;
         height: 34vh;
@@ -261,9 +259,6 @@
     }
 }
 
-
-
-
 .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol {
     width: 100%;
     max-height: auto;
@@ -274,7 +269,6 @@
     justify-content: space-evenly;
     gap: 3rem;
     
-
     article {
         width: map-get($map: $cards, $key: ancho);
         height: map-get($map: $cards, $key: alto);
@@ -290,7 +284,6 @@
 
         &:hover {
             box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
-            // transform: translateY(-0.5%);
         }
 
         a {
@@ -309,6 +302,7 @@
                 border-radius: 12px 12px 0px 0px;
             }
         }
+
         p {
             width: 100%;
             height: fit-content;
@@ -321,6 +315,7 @@
             justify-content: center;
             align-items: center;
         }
+
         h4{
             font-size: .8rem;
             font-family: Arial, Helvetica, sans-serif;
@@ -328,67 +323,3 @@
         }
     }
 }
-
-
-
-// .loNuevo {
-//     width: 100%;
-//     height: 55vh;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-evenly;
-
-//     h2 {
-//         width: 100%;
-//         height: 10vh;
-//         display: flex;
-//         justify-content: center;
-//         align-items: flex-end;
-//         font-family: 'Maven Pro', sans-serif;
-//     }
-
-//     article {
-//         width: map-get($map: $cards, $key: ancho);
-//         height: map-get($map: $cards, $key: alto);
-//         background-color: $cartas;
-//         border-radius: map-get($map: $cards, $key: bordes);
-//         box-shadow: map-get($map: $cards, $key: sombra);
-//         transition: map-get($map: $cards, $key: transición);
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-
-//         &:hover {
-//             box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
-//             transform: translateY(-4%);
-//         }
-
-//         a {
-//             img {
-//                 width: 100%;
-//                 height: 23vh;
-//                 border-radius: 12px 12px 0px 0px;
-//             }
-//         }
-
-//         .product {
-//             img {
-//                 width: 100%;
-//                 height: 23vh;
-//                 border-radius: 12px 12px 0px 0px;
-//             }
-//         }
-
-//         p {
-//             width: 100%;
-//             height: 6vh;
-//             font-size: 1.1rem;
-//             padding-left: 10px;
-//             padding-right: 10px;
-//             display: flex;
-//             justify-content: center;
-//             font-family: Arial, Helvetica, sans-serif;
-//             align-items: center;
-//         }
-//     }
-// }

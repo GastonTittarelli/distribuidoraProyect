@@ -1,9 +1,6 @@
 @media screen and (max-width:1662px) {
     .conteiner_card {
-
         .card {
-            // width: 26vw;
-
             p {
                 font-size: 1rem;
             }
@@ -12,10 +9,7 @@
 }
 
 .nuevos_productos {
-
     .nuevo_card {
-        // width: 25vw;
-
         p {
             font-size: 1.1rem;
         }
@@ -29,9 +23,7 @@
     }
 
     .contenedorInfoHistoria {
-
         .historia .historiaText {
-
             h2 {
                 font-size: 1.2rem;
             }
@@ -42,7 +34,6 @@
         }
 
         .infoDistribucion .infoText {
-
             p {
                 font-size: 1rem;
             }
@@ -113,30 +104,6 @@
         }
     }
 
-    // .mainIdex {
-    //     height: 260vh;
-    // }
-
-    // .conteiner_card {
-    //     height: 140vh;
-
-    //     .card {
-    //         width: 35vw;
-    //     }
-    // }
-
-    // .nuevos_productos {
-    //     height: 100vh;
-
-    //     .nuevo_card {
-    //         width: 35vw;
-    //     }
-    // }
-
-    // .mainAcercaDe {
-    //     height: 300vh;
-    // }
-
     .contenedorInfoHistoria {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
@@ -152,7 +119,6 @@
                 height: 45vh;
                 align-items: center;
 
-                
                 h2 {
                     font-size: 1.3rem;
                     margin: 0;
@@ -232,6 +198,7 @@
             }
         }
     }
+
     footer {
         .redes {   
             a {
@@ -242,9 +209,6 @@
             }
         }
 
-    // .mainProductos {
-    //     height: 320vh;
-    // }
     .contenedorInfoHistoria{
         .historia{
             .historiaText{
@@ -272,54 +236,6 @@
             }
         }
     }
-
-    // .conAlcohol {
-    //     article {
-    //         height: 25vh;
-
-    //         a {
-    //             img {
-    //                 height: 18vh;
-    //             }
-
-    //             p {
-    //                 font-size: .9rem;
-    //             }
-    //         }
-    //     }
-    // }
-
-//     .sinAlcohol {
-//         article {
-//             height: 25vh;
-
-//             a {
-//                 img {
-//                     height: 18vh;
-//                 }
-
-//                 p {
-//                     font-size: .9rem;
-//                 }
-//             }
-//         }
-//     }
-
-//     .otrosProductos {
-//         article {
-//             height: 25vh;
-
-//             a {
-//                 img {
-//                     height: 18vh;
-//                 }
-
-//                 p {
-//                     font-size: .9rem;
-//                 }
-//             }
-//         }
-//     }
 }
 
 @media screen and (max-width:958px) {
@@ -345,25 +261,6 @@
             }
         }
     }
-    // .mainIdex {
-    //     height: 420vh;
-    // }
-
-    // .conteiner_card {
-    //     height: 250vh;
-
-    //     .card {
-    //         width: 51vw;
-    //     }
-    // }
-
-    // .nuevos_productos {
-    //     height: 140vh;
-
-    //     .nuevo_card {
-    //         width: 51vw;
-    //     }
-    // }
 
     footer {
         .redes {
@@ -378,36 +275,6 @@
     .carousel-inner {
         width: 80vw;
     }
-
-    // .mainProductos {
-    //     height: 420vh;
-    // }
-
-    // .conAlcohol {
-    //     height: 100vh;
-
-    //     article {
-    //         width: 22vw;
-    //     }
-    // }
-
-    // .sinAlcohol {
-    //     height: 100vh;
-
-    //     article {
-    //         width: 22vw;
-    //     }
-    // }
-
-    // .otrosProductos {
-    //     height: 100vh;
-
-    //     article {
-    //         width: 22vw;
-    //     }
-    // }
-
-
 }
 
 
@@ -415,10 +282,7 @@
     header{
         nav{
             ul{
-                
                 li{
-                    
-                    
                     a{
                         font-size: 0.8rem;
                     }
@@ -447,20 +311,9 @@
         }
     }
 
-
-    // .mainAcercaDe {
-    //     height: 280vh;
-    // }
-
     .contenedorInfoHistoria {
-        // height: 205vh;
-
         .historia {
-            // height: 100vh;
-
             .historiaText {
-                // height: 45vh;
-
                 h2 {
                     padding-left: 1rem;
                     font-size: 1.3rem;
@@ -472,7 +325,6 @@
                 }
             }
 
-            
                     .historiaImg {
                         height: auto;
                         width: 100%;
@@ -480,12 +332,12 @@
                         flex-wrap: wrap;
                     
                         img {
-                            // width: 50px;
                             height: 80%;
                         }
-        }
-    }
-    }
+                    }
+                }
+            }
+
     .infoDistribucion {
         .infoText {
             align-items: center;
@@ -521,36 +373,11 @@
         }
     }
 
-    // .conAlcohol {
-    //     article {
-    //         p {
-    //             font-size: .7rem;
-    //         }
-    //     }
-    // }
-
-    // .sinAlcohol {
-    //     article {
-    //         p {
-    //             font-size: .7rem;
-    //         }
-    //     }
-    // }
-
-    // .otrosProductos {
-    //     article {
-    //         p {
-    //             font-size: .7rem;
-    //         }
-    //     }
-    // }
-
     .mapa {
         iframe {
             width: 65vw;
         }
     }
-
 
     .videoContainer {
         width: 95%; 
@@ -565,7 +392,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             
-    
             p{
                 width: 100%;
                 display: flex;
@@ -577,8 +403,8 @@
             a{
                 width: 120px;
                 height: 35px;
-                
             }
+
             button{
                 width: 120px;
                 height: 35px;
@@ -587,11 +413,10 @@
             
             .tooltip {
                 position: relative;
-    
+
                 .llamada {
                     color: white;
                     background-color: gray;
-                    
                 }
                 
                 .tooltip-text {
@@ -607,16 +432,12 @@
             height: auto; 
             display: block;
             border-radius: 5px;
-            
-    
-            
         }
     }
 
     .nuevos_productos{
         margin-top: 4rem;
     }
-
 }
 
 @media screen and (max-width:674px) {
@@ -686,7 +507,6 @@
                 height: 100%;
                 width: 100%;
                 padding-top: 1rem;
-                
 
                 li {
                     height: fit-content;
@@ -722,9 +542,11 @@
                     display: flex;
                     align-items: flex-start;
                     flex-wrap: wrap;
+
                     .shadow-link{
                         height: 17%;
                     }
+
                     .submenu {
                         z-index: 1;
                         position: relative;
@@ -751,21 +573,19 @@
                             display: flex;
                             border-top: transparent;
                             padding-left: 5px;
+
                             a{
                                 font-size: 0.8rem;
                             }
                         }
-
                     }
+
                     &:hover .submenu{
                         display: flex; 
                         position: static;
                         min-height: 83%;
                     }
-                    
                 }
-
-            
             }
         }
     }
@@ -773,8 +593,10 @@
     .contenedorInfoHistoria {
         .historia {
             min-height: 60vh;
+
             .historiaText {
                 padding-top: 2rem;
+
                 h2 {
                     text-align: center;
                     margin: 0;
@@ -785,9 +607,11 @@
         .infoDistribucion {
             min-height: 60vh;
             gap: 0.5rem;
+
             .infoText {
                 padding-bottom: 0;
                 margin-bottom: 0;
+
                 h2 {
                     text-align: center;
                     margin: 0;
@@ -812,27 +636,24 @@
     footer {
         .redes {   
             a {
+
                 img {
                     height: 3vh;
                 }
-                }
             }
         }
+    }
+
     .conteiner_card {
         .card {
-            // width: 70vw;
-
             p {
                 font-size: .8rem;
             }
-
         }
     }
 
     .nuevos_productos {
         .nuevo_card {
-            // width: 75vw;
-
             p {
                 font-size: .8rem;
             }
@@ -849,9 +670,7 @@
         #inputBusqueda{
             width: 90%;
         }
-
     }
-
 
     .productos {
         height: 110vh;
@@ -866,6 +685,7 @@
             width: 90%;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
+
             .mapa {
                 h3 {
                     font-size: 1.1rem;
@@ -882,8 +702,11 @@
         .historia {
             .historiaText {
                 margin-top: 1rem;
-            }}}
+            }
+        }
+    }
 }
+
 @media screen and (max-width:518px) {
     footer {
         .redes {
@@ -891,52 +714,36 @@
         }
     }
 
-
     .contenedorInfoHistoria {
         .historia {
             .historiaText {
                 height: auto;
+
                 h2{
                     margin-top: 0.5rem;
                 }
+
                 p {
                     font-size: 1.1rem;
                     padding-top: 0.5rem;
                 }
             }
-
-            
         }
+
         .infoDistribucion {
-            
             .infoText {
                 height: auto;
                 margin: 0;
                 gap: 2rem;
+
                 .textos {
-                    
                     padding-top: 0;
                 }
             }
+        }
     }
-}
-
-
-// .historiaImg {
-//     height: auto;
-//     display: flex;
-//     flex-wrap: wrap;
-
-//     img {
-//         width: fit-content;
-//         height: 80%;
-//     }
-// }
-
 
     .mainProductos {
-        // height: 500vh;
-
         .conAlcohol {
             height: 130vh;
 
@@ -995,7 +802,6 @@
         }
     }
 
-
     .nuestroContacto {
         width: 90px;
 
@@ -1006,7 +812,6 @@
         }
     }
 
-
     .videoContainer {
         min-height: 80vh;
         
@@ -1016,19 +821,23 @@
             justify-content: center;
             align-items: center;
             padding: 0;
+
             p{
                 font-size: 1.3rem;
             }
+
             a{
                 width: 140px;
                 height: 43px;
             }
+
             button{
                 width: 140px;
                 height: 43px;
                 font-size: 0.8rem;
             }
         }
+
         .productsVideo{
             width: 95%;
         }
@@ -1041,14 +850,11 @@
     }
 
     .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol{
-
         article{
             width: 300px;
             height: 350px;
         }
     }
-
-
 }
 
 @media screen and (max-width:402px) {
@@ -1071,7 +877,6 @@
         }
     }
 
-    
     .contenedorInfoHistoria {
             .historia{
                 .historiaText{
@@ -1088,16 +893,12 @@
                     flex-wrap: wrap;
                 
                     img {
-                        // width: 50px;
                         height: 80%;
                     }
                 }
             }
-            
-            
         
         .infoDistribucion {
-            // max-height: 75vh;
             .infoText {
                 p {
                     margin: 0;
@@ -1105,7 +906,6 @@
 
                 h2 {
                     margin: 0;
-                    // padding-top: 0;
                 }
             }
         }
@@ -1122,18 +922,4 @@
     .whatsapp {
         justify-content: flex-start;
     }
-
-    
 }
-
-
-// @media screen and (max-width:380px) {
-
-//     .historiaImg {
-//         background-color: aqua;
-//         img {
-//             height: auto;
-//             width: 80%;
-//         }
-//     }
-// }

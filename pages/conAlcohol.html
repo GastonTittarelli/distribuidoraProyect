@@ -52,6 +52,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="cAlcohol">
         
         <div class="containerBtn">
@@ -67,71 +68,81 @@
             <input type="text" id="inputBusqueda" placeholder="Buscar productos">
         </div>
 
-        
         <section class="conAlcohol wow fadeIn" id="conAlcohol">
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/beefeater.jpg"
                         alt="imagen de beefeater botella"></div>
                 <p>Gin Beefeater Clásico - Botella 1L</p>
                 <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/corona.png"
                         alt="imagen de corona botella"></div>
                 <p>Cerveza Corona - Botella 330ml</p>
                 <h4>Venta en pack de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/fernet.jfif"
                         alt="imagen de fernet botella"></div>
                 <p>Fernet Branca - Botella 750ml</p>
                 <h4>Venta individual o en caja de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/havanaClub.jpg"
                         alt="imagen de havana club botella"></div>
                 <p>Ron Havana Club 7 años - Botella 750ml</p>
                 <h4>Venta individual o en caja de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/heinekenLata.jpg"
                         alt="imagen de heineken lata"></div>
                 <p>Cerveza Heineken - Lata 330ml</p>
                 <h4>Venta en pack de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/jackDanielsBottle.png"
                         alt="imagen de jack daniels botella"></div>
                 <p>Whisky Jack Daniels - Botella 750ml</p>
                 <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/johnnieWalker.png"
                         alt="imagen de johnnie walker botella"></div>
                 <p>Whisky Johnnie Walker - Botella 750ml</p>
                 <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/luigiBoscaDelAlma.jpg"
                         alt="imagen de luigi bosca alma botella"></div>
                 <p>Vino Luigi Bosca Chardonnay - Botella 750ml</p>
                 <h4>Venta individual o en caja de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/schneider.jpg"
                         alt="imagen de schneider lata"></div>
                 <p>Cerveza Schneider - Lata 330ml</p>
                 <h4>Venta en pack de 6 unidades</h4>
             </article>
+
             <article>
                 <div class="product"><img src="../assets/img/con_alcohol/smirnoff.png"
                         alt="imagen de smirnoff botella"></div>
                 <p>Vodka Smirnoff - Botella 700ml</p>
                 <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
+
         </section>
-        
     </main>
+
     <footer>
         <div class="redes">
             <a href="https://www.facebook.com/"><img src="../assets//img/iconos/facebookIcon.png"
@@ -149,30 +160,29 @@
         new WOW().init();;
     </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-const inputBusqueda = document.getElementById('inputBusqueda');
-const productos = document.querySelectorAll('.conAlcohol article');
+    <!-- Buscador / filtro de productos-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const inputBusqueda = document.getElementById('inputBusqueda');
+    const productos = document.querySelectorAll('.conAlcohol article');
 
-inputBusqueda.addEventListener('input', function() {
-    const textoBusqueda = inputBusqueda.value.toLowerCase().trim();
-    const palabrasBusqueda = textoBusqueda.split(' ').filter(palabra => palabra.length > 0);
+    inputBusqueda.addEventListener('input', function() {
+        const textoBusqueda = inputBusqueda.value.toLowerCase().trim();
+        const palabrasBusqueda = textoBusqueda.split(' ').filter(palabra => palabra.length > 0);
 
-    productos.forEach(function(producto) {
-        const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
-        const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
+        productos.forEach(function(producto) {
+            const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
+            const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
 
-        if (todasPalabrasEnNombre) {
-            producto.style.display = 'block';
-        } else {
-            producto.style.display = 'none';
-        }
+            if (todasPalabrasEnNombre) {
+                producto.style.display = 'flex';
+            } else {
+                producto.style.display = 'none';
+            }
+        });
     });
-});
-});
-</script>
-
-
+    });
+    </script>
 </body>
 
 </html>

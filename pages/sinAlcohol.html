@@ -148,30 +148,29 @@
         new WOW().init();;
     </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-const inputBusqueda = document.getElementById('inputBusqueda');
-const productos = document.querySelectorAll('.sinAlcohol article');
+<!-- Buscador / filtro de productos-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const inputBusqueda = document.getElementById('inputBusqueda');
+        const productos = document.querySelectorAll('.sinAlcohol article');
 
-inputBusqueda.addEventListener('input', function() {
-    const textoBusqueda = inputBusqueda.value.toLowerCase().trim();
-    const palabrasBusqueda = textoBusqueda.split(' ').filter(palabra => palabra.length > 0);
+        inputBusqueda.addEventListener('input', function() {
+            const textoBusqueda = inputBusqueda.value.toLowerCase().trim();
+            const palabrasBusqueda = textoBusqueda.split(' ').filter(palabra => palabra.length > 0);
 
-    productos.forEach(function(producto) {
-        const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
-        const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
+            productos.forEach(function(producto) {
+                const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
+                const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
 
-        if (todasPalabrasEnNombre) {
-            producto.style.display = 'block';
-        } else {
-            producto.style.display = 'none';
-        }
-    });
-});
-});
-</script>
-
+                if (todasPalabrasEnNombre) {
+                    producto.style.display = 'flex';
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        });
+        });
+    </script>
 
 </body>
-
 </html>

@@ -60,8 +60,6 @@
                 <input type="text" id="inputBusqueda" placeholder="Buscar productos">
             </div>
         
-
-
         <section class="nuestrosProductos wow fadeIn" id="nuestrosProductos">
             
             <article>
@@ -124,7 +122,6 @@
                 <p>Vodka Smirnoff - Botella 700ml</p>
                 <h4>Venta individual o en caja de 12 unidades</h4>
             </article>
-        
 
             <article>
                 <div class="product"><img src="../assets/img/sin_alcohol/aquarius.jpg"
@@ -185,7 +182,6 @@
                 <p>Agua Villavicencio - Botella 500ml</p>
                 <h4>Venta en pack de 12 unidades</h4>
             </article>
-        
 
             <article>
                 <div class="product"><img src="../assets/img/otros_productos/aceiteDeOliva.jpg"
@@ -237,26 +233,6 @@
             </article>
         </section>
 
-
-        <!-- <section class="loNuevo wow fadeIn" id="loNuevo">
-            <h2>Lo nuevo 🔥</h2>
-            <article>
-                <div class="product"><img src="../assets//img/nuevos_productos/absolutsLimitado.png"
-                        alt="imagen de absolut edicion limitada"></div>
-                <p>Absolut limited - 1L</p>
-            </article>
-            <article>
-                <div class="product"><img src="../assets/img/nuevos_productos/cocaLife.jpg"
-                        alt="imagen de coca-cola Life"></div>
-                <p>Coca-Cola Life - 354ml</p>
-            </article>
-            <article>
-                <div class="product"><img src="../assets/img/nuevos_productos/newPepsiSmoresCollection.jpg"
-                        alt="imagen de Pepsi coleccion mores"></div>
-                <p>Pepsi Mores - 200ml</p>
-            </article>
-        </section> -->
-
     </main>
     <footer>
         <div class="redes">
@@ -274,7 +250,7 @@
         new WOW().init();
     </script>
     
-
+    <!-- Buscador / filtro de productos-->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     const inputBusqueda = document.getElementById('inputBusqueda');
@@ -289,7 +265,7 @@
             const todasPalabrasEnNombre = palabrasBusqueda.every(palabra => nombreProducto.includes(palabra));
 
             if (todasPalabrasEnNombre) {
-                producto.style.display = 'block';
+                producto.style.display = 'flex';
             } else {
                 producto.style.display = 'none';
             }

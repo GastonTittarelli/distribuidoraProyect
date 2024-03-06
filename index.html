@@ -28,6 +28,7 @@
             <h1>Distribuidora Tittarelli</h1>
             <h2>-Directo a tu Hogar-</h2>
         </div>
+
         <!-- propiedad del menu hamburguesa -->
         <input type="checkbox" id="menu-check">
         <label id="menu" for="menu-check">
@@ -52,6 +53,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="mainIdex">
         <div class="videoContainer">
             <div class="contactInfo">
@@ -68,8 +70,6 @@
                     <button class="llamada">Llamar ahora</button>
                     <div id="tooltipText" class="tooltip-text">Teléfono: 1234567890</div>
                 </div>
-        
-
             </div>
             <video autoplay loop muted class="productsVideo">
                 <source class="videoLoop" src="./assets/video/productsVideoO.mp4" type="video/mp4">
@@ -142,76 +142,48 @@
             <p>Distribuidora Tittarelli - Todos los derechos reservados ©</p>
         </div>
     </footer>
+
     <script src="./js/wow.min.js"></script>
     <script>
         new WOW().init();;
     </script>
 
-<script>
-    document.getElementById("abrirChat").addEventListener("click", function() {
-        // Abre el chat de Tidio
-        if (typeof tidioChatApi !== 'undefined') {
-            tidioChatApi.open();
-        } else {
-            console.error('No se pudo encontrar la API de Tidio.');
-        }
-    });
-</script>
+    <script>
+        document.getElementById("abrirChat").addEventListener("click", function() {
+            // Abre el chat de Tidio
+            if (typeof tidioChatApi !== 'undefined') {
+                tidioChatApi.open();
+            } else {
+                console.error('No se pudo encontrar la API de Tidio.');
+            }
+        });
+    </script>
 
-<!-- <script>
-    function mostrarTooltip() {
+    <script>
     const tooltip = document.getElementById("tooltipText");
-    tooltip.style.display = "block";
+    const boton = document.querySelector(".llamada");
 
-    // Ocultar el tooltip despues de x
-    setTimeout(function() {
-        tooltip.style.display = "none";
-    }, 100000); 
-}
-</script> -->
-
-<script>
-const tooltip = document.getElementById("tooltipText");
-const boton = document.querySelector(".llamada");
-
-// Función para mostrar u ocultar el tooltip
-function toggleTooltip() {
-    if (tooltip.style.display === "block") {
-        tooltip.style.display = "none";
-    } else {
-        tooltip.style.display = "block";
+    // Función para mostrar u ocultar el tooltip
+    function toggleTooltip() {
+        if (tooltip.style.display === "block") {
+            tooltip.style.display = "none";
+        } else {
+            tooltip.style.display = "block";
+        }
     }
-}
 
-// Función para ocultar el tooltip si se hace clic fuera del botón
-function ocultarTooltip(event) {
-    if (event.target !== boton && event.target !== tooltip) {
-        tooltip.style.display = "none";
+    // Función para ocultar el tooltip si se hace clic fuera del botón
+    function ocultarTooltip(event) {
+        if (event.target !== boton && event.target !== tooltip) {
+            tooltip.style.display = "none";
+        }
     }
-}
 
-// Agregar un controlador de eventos de clic al botón
-boton.addEventListener("click", toggleTooltip);
+    boton.addEventListener("click", toggleTooltip);
 
-// Agregar un controlador de eventos de clic al documento para ocultar el tooltip si se hace clic fuera del botón
-document.addEventListener("click", ocultarTooltip);
-</script>
-
-
-<!-- <script>
-    document.addEventListener('click', function(event) {
-    const contenedor = document.getElementById('contenedor');
-    const target = event.target;
-
-    // Verifica si el clic no está dentro del contenedor y tampoco dentro de su descendencia
-    if (!contenedor.contains(target)) {
-        // Oculta el contenido del contenedor
-        contenedor.style.overflow = 'hidden';
-    }
-});
-</script> -->
-
-
+    // Agregar un controlador de eventos de clic al documento para ocultar el tooltip si se hace clic fuera del botón
+    document.addEventListener("click", ocultarTooltip);
+    </script>
 </body>
 
 </html>

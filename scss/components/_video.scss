@@ -61,7 +61,6 @@
             border-radius: 25px 25px 25px 25px;
             background-color: rgb(72, 163, 224);
             color: white;
-            // font-weight: 549;
             font-size: 1rem;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -76,7 +75,6 @@
             .llamada {
                 color: white;
                 background-color: gray;
-                
             }
             
             .tooltip-text {
@@ -96,17 +94,12 @@
                 white-space: nowrap;
             }
         }
-        
-        
     }
     
     .productsVideo{
-        width: 55%; /* Establece el ancho del video al 100% del contenedor */
-        height: auto; /* Mantiene la proporción del video */
+        width: 55%; 
+        height: auto; 
         display: block;
         border-radius: 5px;
-        
-
-        
     }
 }

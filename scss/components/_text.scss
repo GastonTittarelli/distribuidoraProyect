@@ -47,7 +47,6 @@
     }
 }
 
-
 .infoDistribucion {
     min-height: 52vh;
     max-height: 600vh;;
@@ -65,11 +64,11 @@
         flex-direction: column;
         justify-content: space-between;
         padding-top: .5rem;
-        // background-color: aqua;
+        
 
         .textos {
-            // background-color: green;
             height: 50%;
+            
             h2 {
                 width: 100%;
                 font-family: 'Maven Pro', sans-serif;
