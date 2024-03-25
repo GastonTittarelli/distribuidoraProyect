@@ -1,3 +1,88 @@
+@media screen and (min-width:1663px) {
+
+    header{
+        nav{
+            ul{
+                li{
+                    font-size: 1.2rem;
+                    .shadow-link{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+                .productos-dropdown{
+                    .submenu {
+                        top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainIdex {
+        min-height: 220vh;
+    }
+    .conteiner_card {
+        min-height: 80vh;
+        .card {
+            width: 400px;
+            height: 280px;
+
+            a {
+                img {
+                    height: 230px;
+                }
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .nuevos_productos {
+        min-height: 50vh;
+
+        .nuevo_card {
+            width: 400px;
+            height: 280px;
+
+            a {
+                img {
+                    height: 230px;
+                }
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .infoDistribucion {
+        .infoText{
+            gap: 3rem;
+        }
+    }
+
+    .mapa{
+        #map-content{
+            width: 800px;
+            
+            iframe {
+                height: 50vh;
+            }
+
+            .direction {
+                font-size: 1.4rem;
+                p{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:1662px) {
     .conteiner_card {
         .card {
@@ -6,18 +91,52 @@
             }
         }
     }
-}
-
-.nuevos_productos {
-    .nuevo_card {
-        p {
-            font-size: 1.1rem;
+    .nuevos_productos {
+        .nuevo_card {
+            p{
+                font-size: 1rem;
+            }
         }
     }
 }
 
 
+
 @media screen and (max-width:1596px) {
+
+    .mainIdex {
+        min-height: 290vh;
+    }
+    .conteiner_card {
+        min-height: 110vh;
+        .card {
+            width: 350px;
+            height: 250px;
+
+            a {
+                img {
+                    height: 200px;
+                }
+            }
+            
+        }
+    }
+
+    .nuevos_productos {
+        min-height: 60vh;
+
+        .nuevo_card {
+            width: 350px;
+            height: 250px;
+
+            a {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
     .productos section {
         width: 31vw;
     }
@@ -150,7 +269,7 @@
         flex-wrap: wrap;
 
         .infoText {
-            width: 100vw;
+            width: 100%;
             height: 45vh;
             align-items: center;
 
@@ -315,12 +434,10 @@
         .historia {
             .historiaText {
                 h2 {
-                    padding-left: 1rem;
                     font-size: 1.3rem;
                 }
 
                 p {
-                    padding-left: 1rem;
                     font-size: 1rem;
                 }
             }
@@ -661,8 +778,12 @@
     }
 
     footer {
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
         .parrafoFooter {
-            font-size: 0.6rem;
+            justify-content: center;
+            font-size: 0.8rem;
         }
     }
 
@@ -725,12 +846,16 @@
 
                 p {
                     font-size: 1.1rem;
-                    padding-top: 0.5rem;
+                    padding-top: 1rem;
+                    padding-left: 0;
                 }
             }
         }
 
         .infoDistribucion {
+            height: auto;
+            padding-top: 0.5rem;
+            padding-bottom:  0.5rem;
             .infoText {
                 height: auto;
                 margin: 0;
@@ -852,7 +977,14 @@
     .nuestrosProductos, .conAlcohol, .otrosProductos, .sinAlcohol{
         article{
             width: 300px;
-            height: 350px;
+            height: 270px;
+
+            .product {
+                img {
+                    width: 100%;
+                    height: 170px;
+                }
+            }
         }
     }
 }
@@ -860,8 +992,7 @@
 @media screen and (max-width:402px) {
     footer {
         .parrafoFooter {
-            width: 70%;
-            font-size: .5rem;
+            font-size: 0.6rem;
         }
     }
 

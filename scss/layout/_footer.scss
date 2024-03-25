@@ -4,27 +4,10 @@ footer {
     width: 100%;
     display: flex;
 
-    .redes {
-        width: 10%;
-        height: 7vh;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        justify-content: center;
-
-        a {
-            display: flex;
-            align-items: center;
-            img {
-                width: auto;
-                height: 4.5vh;
-            }
-        }
-    }
 
     .parrafoFooter {
         color: rgb(199, 199, 199);
-        width: 90%;
+        width: 95%;
         height: 7vh;
         display: flex;
         justify-content: end;

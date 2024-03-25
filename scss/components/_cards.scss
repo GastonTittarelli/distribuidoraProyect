@@ -120,11 +120,11 @@
             a{
                 .btn {
                     background-color: transparent;
-                    border: 2px solid gray;
+                    border: 1px solid  black;
                     font-family: "Marven Pro", sans-serif;
                     color: rgb(59, 59, 59);
                     font-weight: bold;
-                    padding: 12px 20px;
+                    padding: 8px 20px;
                     min-width: 200px;
                     font-size: 1rem;
                     border-radius: 0px 20px 20px 0px;
@@ -147,7 +147,7 @@
                         top: 0;
                         width: 0;
                         height: 100%;
-                        background-color: gray;
+                        background-color:  rgb(80, 77, 180);
                         border-radius: 0px 19px 19px 0px;
                         z-index: -1;
                         transition: width 0.7s;

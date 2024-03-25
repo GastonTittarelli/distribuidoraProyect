@@ -353,11 +353,11 @@ main {
 }
 .containerBtn .middle a .btn {
   background-color: transparent;
-  border: 2px solid gray;
+  border: 1px solid black;
   font-family: "Marven Pro", sans-serif;
   color: rgb(59, 59, 59);
   font-weight: bold;
-  padding: 12px 20px;
+  padding: 8px 20px;
   min-width: 200px;
   font-size: 1rem;
   border-radius: 0px 20px 20px 0px;
@@ -378,7 +378,7 @@ main {
   top: 0;
   width: 0;
   height: 100%;
-  background-color: gray;
+  background-color: rgb(80, 77, 180);
   border-radius: 0px 19px 19px 0px;
   z-index: -1;
   transition: width 0.7s;
@@ -542,25 +542,9 @@ footer {
   width: 100%;
   display: flex;
 }
-footer .redes {
-  width: 10%;
-  height: 7vh;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  justify-content: center;
-}
-footer .redes a {
-  display: flex;
-  align-items: center;
-}
-footer .redes a img {
-  width: auto;
-  height: 4.5vh;
-}
 footer .parrafoFooter {
   color: rgb(199, 199, 199);
-  width: 90%;
+  width: 95%;
   height: 7vh;
   display: flex;
   justify-content: end;
@@ -813,7 +797,6 @@ footer .parrafoFooter p {
 }
 .mapa #map-content {
   min-height: 63vh;
-  max-height: auto;
   width: 500px;
   display: flex;
   text-align: center;
@@ -872,16 +855,96 @@ footer .parrafoFooter p {
   border-radius: 10px 10px 10px 10px;
 }
 
+@media screen and (min-width: 1663px) {
+  header nav ul li {
+    font-size: 1.2rem;
+  }
+  header nav ul li .shadow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  header nav ul .productos-dropdown .submenu {
+    top: 30px;
+  }
+  .mainIdex {
+    min-height: 220vh;
+  }
+  .conteiner_card {
+    min-height: 80vh;
+  }
+  .conteiner_card .card {
+    width: 400px;
+    height: 280px;
+  }
+  .conteiner_card .card a img {
+    height: 230px;
+  }
+  .conteiner_card .card p {
+    font-size: 1.1rem;
+  }
+  .nuevos_productos {
+    min-height: 50vh;
+  }
+  .nuevos_productos .nuevo_card {
+    width: 400px;
+    height: 280px;
+  }
+  .nuevos_productos .nuevo_card a img {
+    height: 230px;
+  }
+  .nuevos_productos .nuevo_card p {
+    font-size: 1.1rem;
+  }
+  .infoDistribucion .infoText {
+    gap: 3rem;
+  }
+  .mapa #map-content {
+    width: 800px;
+  }
+  .mapa #map-content iframe {
+    height: 50vh;
+  }
+  .mapa #map-content .direction {
+    font-size: 1.4rem;
+  }
+  .mapa #map-content .direction p {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 1662px) {
   .conteiner_card .card p {
     font-size: 1rem;
   }
+  .nuevos_productos .nuevo_card p {
+    font-size: 1rem;
+  }
 }
-.nuevos_productos .nuevo_card p {
-  font-size: 1.1rem;
-}
-
 @media screen and (max-width: 1596px) {
+  .mainIdex {
+    min-height: 290vh;
+  }
+  .conteiner_card {
+    min-height: 110vh;
+  }
+  .conteiner_card .card {
+    width: 350px;
+    height: 250px;
+  }
+  .conteiner_card .card a img {
+    height: 200px;
+  }
+  .nuevos_productos {
+    min-height: 60vh;
+  }
+  .nuevos_productos .nuevo_card {
+    width: 350px;
+    height: 250px;
+  }
+  .nuevos_productos .nuevo_card a img {
+    height: 200px;
+  }
   .productos section {
     width: 31vw;
   }
@@ -961,7 +1024,7 @@ footer .parrafoFooter p {
     flex-wrap: wrap;
   }
   .infoDistribucion .infoText {
-    width: 100vw;
+    width: 100%;
     height: 45vh;
     align-items: center;
   }
@@ -1051,11 +1114,9 @@ footer .parrafoFooter p {
     width: 80px;
   }
   .contenedorInfoHistoria .historia .historiaText h2 {
-    padding-left: 1rem;
     font-size: 1.3rem;
   }
   .contenedorInfoHistoria .historia .historiaText p {
-    padding-left: 1rem;
     font-size: 1rem;
   }
   .contenedorInfoHistoria .historia .historiaImg {
@@ -1322,8 +1383,14 @@ footer .parrafoFooter p {
   .nuevos_productos .nuevo_card p {
     font-size: 0.8rem;
   }
+  footer {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
   footer .parrafoFooter {
-    font-size: 0.6rem;
+    justify-content: center;
+    font-size: 0.8rem;
   }
   .titleContainer #inputBusqueda {
     width: 90%;
@@ -1361,7 +1428,13 @@ footer .parrafoFooter p {
   }
   .contenedorInfoHistoria .historia .historiaText p {
     font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-left: 0;
+  }
+  .contenedorInfoHistoria .infoDistribucion {
+    height: auto;
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .contenedorInfoHistoria .infoDistribucion .infoText {
     height: auto;
@@ -1446,13 +1519,16 @@ footer .parrafoFooter p {
   }
   .nuestrosProductos article, .conAlcohol article, .otrosProductos article, .sinAlcohol article {
     width: 300px;
-    height: 350px;
+    height: 270px;
+  }
+  .nuestrosProductos article .product img, .conAlcohol article .product img, .otrosProductos article .product img, .sinAlcohol article .product img {
+    width: 100%;
+    height: 170px;
   }
 }
 @media screen and (max-width: 402px) {
   footer .parrafoFooter {
-    width: 70%;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
   .conteiner_card .card {
     width: 85vw;
