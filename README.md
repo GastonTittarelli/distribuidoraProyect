@@ -1,4 +1,4 @@
-# Catálogo de Productos y Sitio Web Corporativo
+# 📈🗂️🖼️ 📖📋 Catálogo de Productos y Sitio Web Corporativo
 
 Este proyecto es una página web diseñada para mostrar un catálogo de productos de una empresa, proporcionar canales de comunicación, ubicación y detalles sobre la historia de la empresa.
 
